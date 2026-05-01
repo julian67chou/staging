@@ -1,0 +1,11 @@
+# Staging - ignore unnecessary files
+*.md
+!README.md
+*.py
+*.sh
+*.json
+*.txt
+*.bat
+*.ps1
+__pycache__
+.git
