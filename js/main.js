@@ -1,151 +1,103 @@
-/**
- * Block Studio × 伊萊診所 — Motion Engine
- * Dynamic scroll animations, parallax, mouse effects
- */
+/* ═══════════════════════════════════════════
+   無糖律師 × 蠟筆小新 — 實驗版
+   ═══════════════════════════════════════════ */
 
 (function() {
   'use strict';
 
-  // ── 1. LOADING SCREEN ──
+  // ─── LOADER ───
   window.addEventListener('load', () => {
-    setTimeout(() => {
-      document.getElementById('loader').classList.add('loaded');
-    }, 800);
+    const loader = document.getElementById('loader');
+    if (loader) setTimeout(() => loader.classList.add('loaded'), 400);
   });
 
-  // ── 2. NAV SCROLL EFFECT ──
-  const nav = document.querySelector('nav');
-  let lastScroll = 0;
-
-  window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    if (y > 80) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
-    lastScroll = y;
-  }, { passive: true });
-
-  // ── 3. INTERSECTION OBSERVER — Scroll Reveal ──
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -60px 0px'
-  });
-
-  document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale')
-    .forEach(el => revealObserver.observe(el));
-
-  // ── 4. PARALLAX HERO MOUSE EFFECT (Block Studio signature) ──
-  const hero = document.querySelector('.hero');
-  const heroBg = document.querySelector('.hero-bg img');
-
-  if (hero && heroBg) {
-    hero.addEventListener('mousemove', (e) => {
-      const rect = hero.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width - 0.5;
-      const y = (e.clientY - rect.top) / rect.height - 0.5;
-      heroBg.style.transform = `scale(1.08) translate(${x * 20}px, ${y * 12}px)`;
-    });
-
-    hero.addEventListener('mouseleave', () => {
-      heroBg.style.transform = 'scale(1.05) translate(0, 0)';
-    });
-  }
-
-  // ── 5. SCROLL PARALLAX ON HERO ──
-  window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    if (heroBg && y < window.innerHeight) {
-      const rate = y * 0.3;
-      heroBg.style.transform = heroBg.style.transform.replace(/translate\([^)]+\)/, '') + 
-        ` translateY(${rate}px)`;
-    }
-  }, { passive: true });
-
-  // ── 6. SERVICE CARDS STAGGER ANIMATION ──
-  const serviceCards = document.querySelectorAll('.service-card');
-  const staggerObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const cards = entry.target.querySelectorAll('.service-card');
-        cards.forEach((card, i) => {
-          setTimeout(() => {
-            card.classList.add('visible');
-          }, i * 100);
-        });
-        staggerObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  const serviceGrid = document.querySelector('.service-grid');
-  if (serviceGrid) staggerObserver.observe(serviceGrid);
-
-  // ── 7. MOBILE NAV TOGGLE ──
-  const navToggle = document.querySelector('.nav-toggle');
+  // ─── MOBILE NAV ───
+  const toggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
-
-  if (navToggle && navLinks) {
-    navToggle.addEventListener('click', () => {
+  if (toggle && navLinks) {
+    toggle.addEventListener('click', () => {
       navLinks.classList.toggle('open');
+      toggle.innerHTML = navLinks.classList.contains('open')
+        ? '<i class="bi bi-x"></i>'
+        : '<i class="bi bi-list"></i>';
     });
-
     // Close on link click
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('open');
+        toggle.innerHTML = '<i class="bi bi-list"></i>';
       });
     });
   }
 
-  // ── 8. COUNTER ANIMATION (for stats if any) ──
-  const countObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const target = parseInt(el.dataset.target, 10);
-        if (isNaN(target)) return;
-        let current = 0;
-        const step = Math.max(1, Math.floor(target / 40));
-        const timer = setInterval(() => {
-          current += step;
-          if (current >= target) {
-            current = target;
-            clearInterval(timer);
-          }
-          el.textContent = current.toLocaleString();
-        }, 30);
-        countObserver.unobserve(el);
+  // ─── SCROLL REVEAL ───
+  const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+
+  const revealOnScroll = () => {
+    const windowHeight = window.innerHeight;
+    revealElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < windowHeight * 0.85) {
+        el.classList.add('revealed');
       }
     });
+  };
+
+  // Check on load
+  window.addEventListener('load', revealOnScroll);
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll(); // immediate check
+
+  // ─── NAV BACKGROUND ON SCROLL ───
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      nav.style.background = 'rgba(45, 74, 62, 0.98)';
+      nav.style.borderBottomColor = 'rgba(200, 150, 62, 0.2)';
+    } else {
+      nav.style.background = 'rgba(45, 74, 62, 0.92)';
+      nav.style.borderBottomColor = 'rgba(200, 150, 62, 0.15)';
+    }
   });
 
-  document.querySelectorAll('.count-up').forEach(el => countObserver.observe(el));
-
-  // ── 9. SMOOTH SCROLL FOR ANCHOR LINKS ──
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href === '#') return;
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+  // ─── SMOOTH PARALLAX (subtle) ───
+  const parallaxLayer = document.querySelector('.parallax-layer');
+  if (parallaxLayer) {
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      parallaxLayer.style.transform = `translateY(${scrollY * 0.3}px)`;
     });
-  });
+  }
 
-  // ── 10. TREATMENT ITEMS HOVER SOUND (visual only, no audio) ──
-  // Just adds a subtle class for the arrow animation
-
-  console.log('🏥 伊萊診所 × Block Studio Motion Engine initialized');
+  // ─── FLOATING NO-SUGAR EMOJIS ───
+  // Add subtle floating candy emojis to the hero
+  const hero = document.querySelector('.hero');
+  if (hero) {
+    const emojis = ['🍬', '❌', '💼', '⚖️'];
+    for (let i = 0; i < 4; i++) {
+      const span = document.createElement('span');
+      span.textContent = emojis[i];
+      span.style.cssText = `
+        position: absolute; z-index: 1; opacity: 0.08;
+        font-size: ${4 + Math.random() * 4}rem;
+        top: ${10 + Math.random() * 80}%;
+        left: ${5 + Math.random() * 90}%;
+        pointer-events: none;
+        animation: floatEmoji ${6 + Math.random() * 6}s ease-in-out infinite;
+        animation-delay: ${Math.random() * 3}s;
+      `;
+      hero.appendChild(span);
+    }
+    // Add keyframes for floating emojis
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes floatEmoji {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        33% { transform: translateY(-20px) rotate(5deg); }
+        66% { transform: translateY(10px) rotate(-3deg); }
+      }
+    `;
+    document.head.appendChild(style);
+  }
 
 })();
