@@ -3,66 +3,60 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>無糖談心室 — 小新律師的直話直說頻道</title>
-<meta name="description" content="無糖律師 Ainsley 的直話直說頻道。不加糖的訪談、講座、法律觀點，全部用小新律師陪你一起聽懂話中話。">
-<meta property="og:title" content="無糖談心室 — 小新律師的直話直說頻道">
-<meta property="og:description" content="不加糖的訪談、講座、法律觀點。用小新律師陪你聽懂話中話。">
+<title>伊萊診所 — 整合輔助醫學專科 | 宜蘭</title>
+<meta name="description" content="伊萊診所由心臟血管內科權威施奕仲院長創立，專注整合輔助醫學。提供分子點滴治療、靜脈雷射、SIS磁場、氫氣治療、EECP等先進整合輔助醫學服務。">
+<meta property="og:title" content="伊萊診所 — 整合輔助醫學專科">
+<meta property="og:description" content="由心臟血管內科權威施奕仲院長創立，結合專業醫學與整合輔助療法。">
 <meta property="og:type" content="website">
-<meta property="og:image" content="assets/shinchan_hero.webp">
+<meta property="og:image" content="assets/elai-hero-xiaomi.webp">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;800&family=Noto+Serif+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 <link rel="stylesheet" href="css/style.css">
-<link rel="icon" type="image/png" href="assets/shinchan_point.webp">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 </head>
 <body>
 
 <!-- ═══ LOADER ═══ -->
 <div id="loader">
-  <div class="brand-mark"></div>
-  <p>載入小新中...</p>
+  <div class="loader-pulse"></div>
+  <p>載入中</p>
 </div>
 
-<!-- ═══ NAV ═══ -->
-<nav>
-  <div class="nav-inner">
+<!-- ═══ HEADER ═══ -->
+<header>
+  <div class="container">
     <a href="#" class="nav-brand">
-      <span class="nav-logo">🖋️</span>
-      <span>無糖談心室</span>
+      <img src="assets/logo.svg" alt="伊萊診所">
     </a>
-    <button class="nav-toggle"><i class="bi bi-list"></i></button>
-    <ul class="nav-links">
-      <li><a href="#about">關於</a></li>
-      <li><a href="#interviews">訪談</a></li>
-      <li><a href="#lectures">講座</a></li>
-      <li><a href="#books">著作</a></li>
-      <li><a href="#courses">課程</a></li>
-      <li><a href="#contact" class="nav-cta">聯絡</a></li>
+    <button class="nav-toggle" id="navToggle" aria-label="選單"><i class="bi bi-list"></i></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" class="active">關於診所</a></li>
+      <li><a href="#services">服務項目</a></li>
+      <li><a href="#doctor">醫師介紹</a></li>
+      <li><a href="#hours">門診時間</a></li>
+      <li><a href="#contact" class="nav-cta">預約諮詢</a></li>
     </ul>
   </div>
-</nav>
+</header>
 
 <!-- ═══ HERO ═══ -->
 <section class="hero" id="home">
   <div class="hero-bg">
-    <img src="assets/shinchan_hero.webp" alt="小新律師" class="parallax-layer">
+    <img src="assets/elai-hero-xiaomi.webp" alt="伊萊診所">
   </div>
-  <div class="hero-gradient"></div>
-  <div class="hero-content">
-    <div class="hero-badge">無糖談心室 · 直話直說</div>
-    <h1 class="hero-title">
-      不說場面話<br>
-      <span class="gold-text">只說實話</span>
-    </h1>
-    <p class="hero-subtitle">
-      法律、談判、職場、人際——<br>
-      無糖律師 Ainsley 用最直白的方式，陪你聽懂話中話。
-    </p>
-    <div class="hero-actions">
-      <a href="#interviews" class="btn btn-primary">看最新訪談 <i class="bi bi-arrow-right"></i></a>
-      <a href="#about" class="btn btn-outline">認識無糖</a>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge fade-up">宜蘭 · 整合輔助醫學專科</div>
+      <h1>醫學的深度<br><span>溫暖的照護</span></h1>
+      <p>由心臟血管內科權威施奕仲院長領航，融合尖端醫學與整合輔助療法，為宜蘭鄉親提供有溫度的全人健康管理。</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary"><i class="bi bi-telephone"></i> 預約諮詢</a>
+        <a href="#services" class="btn btn-white">探索服務 <i class="bi bi-arrow-right"></i></a>
+      </div>
     </div>
   </div>
   <div class="scroll-indicator">
@@ -74,216 +68,188 @@
 <!-- ═══ ABOUT ═══ -->
 <section class="section" id="about">
   <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">About</div>
+      <h2>宜蘭的醫療新選項</h2>
+      <p>結合專業醫學與整合輔助療法，為您提供全方位的健康照護</p>
+    </div>
     <div class="about-grid">
-      <div class="about-visual reveal-left">
-        <img src="assets/shinchan_point.webp" alt="無糖律師 — 直話直說">
-        <div class="about-visual-label">小新律師 · 無糖代言人</div>
+      <div class="about-image fade-up">
+        <img src="assets/elai-building-new.jpg" alt="伊萊診所新大樓">
       </div>
-      <div class="about-text reveal-right">
-        <div class="section-label">About</div>
-        <h2>歡迎來到無糖談心室</h2>
-        <p class="lead">
-          這裡沒有場面話，只有實話。由無糖律師 Ainsley 主持的直話直說頻道。
-        </p>
-        <p>
-          從法律知識到談判心法，從職場生存到人際關係——每一集都是不加糖的真誠對談。
-          不管是專訪重量級來賓，還是深入校園講座，我們只做一件事：
-          <strong>把複雜的道理，用最簡單的方式說清楚。</strong>
-        </p>
-        <div class="about-stats">
-          <div class="stat">
-            <span class="stat-num">21</span>
-            <span class="stat-label">精彩影片</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">∞</span>
-            <span class="stat-label">直話直說</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">0</span>
-            <span class="stat-label">場面話</span>
-          </div>
-        </div>
+      <div class="about-text fade-up">
+        <h2>日濟安，日日平安</h2>
+        <p class="lead">伊萊診所，座落於好山好水的宜蘭，由心臟血管內科權威施奕仲院長創立。</p>
+        <p>我們相信，真正的健康不僅是沒有疾病，而是身心靈的平衡與和諧。因此伊萊診所不僅提供常規醫療服務，更致力於引進國際先進的整合輔助醫學技術，為宜蘭鄉親提供更多元、更個人化的健康照護選擇。</p>
+        <p>從分子點滴到靜脈雷射，從SIS磁場到氫氣治療——每一項療法都是我們對「醫學的深度，溫暖的照護」這個承諾的實踐。</p>
+        <a href="#services" class="btn btn-primary" style="margin-top: 1rem;">了解服務項目 <i class="bi bi-arrow-right"></i></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ INTERVIEWS ═══ -->
-<section class="section section-alt" id="interviews">
+<!-- ═══ SERVICES ═══ -->
+<section class="section section-alt" id="services">
   <div class="container">
-    <div class="section-header reveal">
-      <div class="section-label">Interviews</div>
-      <h2>重量級來賓訪談</h2>
-      <p>從吳淡如到趙少康，從職場到人生——每一場都是真心話</p>
+    <div class="section-header fade-up">
+      <div class="section-label">Services</div>
+      <h2>整合輔助醫學服務</h2>
+      <p>結合主流醫學與輔助療法，提供全方位的健康照護方案</p>
     </div>
-    <div class="card-grid">
-      <div class="content-card">
-        <div class="card-img"><img src="assets/shinchan_mic.webp" alt="訪談"></div>
-        <div class="card-body">
-          <span class="card-tag">吳淡如</span>
-          <h3>吳淡如專訪無糖律師</h3>
-          <p>從法律觀點到人生哲學，兩集深度對談，聽見最真實的無糖律師。</p>
-          <div class="card-meta"><i class="bi bi-youtube"></i> 2 集訪談</div>
-        </div>
+    <div class="service-grid">
+      <div class="service-card fade-up">
+        <div class="service-icon"><i class="bi bi-droplet"></i></div>
+        <h3>分子點滴治療</h3>
+        <p>將高濃度維生素、胺基酸等營養素直接輸入體內，快速補充細胞所需，提升免疫力與修復力。</p>
       </div>
-      <div class="content-card">
-        <div class="card-img"><img src="assets/shinchan_mic.webp" alt="訪談"></div>
-        <div class="card-body">
-          <span class="card-tag">林書煒</span>
-          <h3>林書煒專訪無糖律師</h3>
-          <p>關於談判、溝通與法律的深度對話，揭開律師不為人知的一面。</p>
-          <div class="card-meta"><i class="bi bi-youtube"></i> 1 集訪談</div>
-        </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><i class="bi bi-sun"></i></div>
+        <h3>靜脈雷射</h3>
+        <p>低能量雷射光照射血液，改善血液循環、調節免疫系統，對三高、失眠、疲勞有顯著效果。</p>
       </div>
-      <div class="content-card">
-        <div class="card-img"><img src="assets/shinchan_mic.webp" alt="訪談"></div>
-        <div class="card-body">
-          <span class="card-tag">趙少康</span>
-          <h3>趙少康專訪《誰說只是約會》</h3>
-          <p>從約會到法律，趙少康與無糖律師的精采對談，讓你重新認識情感中的法律學分。</p>
-          <div class="card-meta"><i class="bi bi-youtube"></i> 1 集訪談</div>
-        </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><i class="bi bi-magnet"></i></div>
+        <h3>SIS 磁場治療</h3>
+        <p>透過特定頻率的脈衝磁場，促進細胞代謝與組織修復，對於慢性疼痛與發炎有良好改善。</p>
       </div>
-      <div class="content-card">
-        <div class="card-img"><img src="assets/shinchan_mic.webp" alt="訪談"></div>
-        <div class="card-body">
-          <span class="card-tag">鄭弘儀&朱姐</span>
-          <h3>鄭弘儀＆朱姐專訪</h3>
-          <p>在熱門節目中的直球對談，無糖律師如何用最白的話講最深的道理。</p>
-          <div class="card-meta"><i class="bi bi-youtube"></i> 1 集訪談</div>
-        </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><i class="bi bi-wind"></i></div>
+        <h3>氫氣治療</h3>
+        <p>吸入高濃度氫氣，利用其選擇性抗氧化特性，減少體內氧化壓力，延緩老化、改善發炎。</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><i class="bi bi-heart-pulse"></i></div>
+        <h3>EECP 體外反搏</h3>
+        <p>非侵入性的心臟輔助治療，透過腿部加壓促進冠狀動脈血流，改善心絞痛與心臟功能。</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><i class="bi bi-clipboard2-pulse"></i></div>
+        <h3>個人化健康管理</h3>
+        <p>根據個人體質與健康狀況，量身打造整合型健康促進方案，從源頭預防疾病發生。</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ LECTURES ═══ -->
-<section class="section" id="lectures">
+<!-- ═══ DOCTOR ═══ -->
+<section class="section" id="doctor">
   <div class="container">
-    <div class="section-header reveal">
-      <div class="section-label">Lectures</div>
-      <h2>企業校園講座</h2>
-      <p>從永豐銀行到校園，把談判與法律的智慧帶到每個人身邊</p>
+    <div class="section-header fade-up">
+      <div class="section-label">Physician</div>
+      <h2>專業醫師團隊</h2>
+      <p>數十年臨床經驗，結合整合輔助醫學的先驅視野</p>
     </div>
-    <div class="lecture-showcase">
-      <div class="lecture-visual reveal-left">
-        <img src="assets/shinchan_lecture.webp" alt="講座">
+    <div class="doctor-grid">
+      <div class="doctor-text fade-up">
+        <h2>施奕仲 院長</h2>
+        <p class="lead">心臟血管內科權威 · 整合輔助醫學先驅</p>
+        <p>施奕仲醫師曾任羅東博愛醫院心臟血管內科主任，擁有數十年臨床經驗。他深刻體認到現代醫學的局限，因此遠赴國內外進修整合輔助醫學，將預防醫學、營養醫學與常規治療結合，開創更全面的醫療模式。</p>
+        <ul>
+          <li>前羅東博愛醫院心臟血管內科主任</li>
+          <li>中華民國心臟學會專科醫師</li>
+          <li>中華民國重症醫學專科醫師</li>
+          <li>台灣整合輔助醫學會會員</li>
+          <li>美國抗衰老醫學會（A4M）會員</li>
+        </ul>
       </div>
-      <div class="lecture-list reveal-right">
-        <div class="lecture-item">
-          <div class="lecture-num">🏦</div>
-          <div class="lecture-info">
-            <h4>永豐銀行勞資講座</h4>
-            <p>台北 · 台中 · 高雄 三場巡迴，談勞資關係中的溝通藝術</p>
-          </div>
-        </div>
-        <div class="lecture-item">
-          <div class="lecture-num">🎓</div>
-          <div class="lecture-info">
-            <h4>校園講座</h4>
-            <p>學生也要學溝通！把談判思維帶進年輕世代</p>
-          </div>
-        </div>
-        <div class="lecture-item">
-          <div class="lecture-num">📰</div>
-          <div class="lecture-info">
-            <h4>天下雜誌直播</h4>
-            <p>職場霸凌與騷擾如何定義？管理者與工作者都該懂的一課</p>
-          </div>
-        </div>
-        <div class="lecture-item">
-          <div class="lecture-num">📚</div>
-          <div class="lecture-info">
-            <h4>臺北市立圖書館講座</h4>
-            <p>每月一書——《誰說只是約會，你就不用懂法律？》</p>
-          </div>
-        </div>
+      <div class="doctor-image fade-up">
+        <img src="assets/doctor-new-rmbg.webp" alt="施奕仲院長">
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ BOOKS ═══ -->
-<section class="section section-alt" id="books">
+<!-- ═══ PHILOSOPHY ═══ -->
+<section class="section section-alt" id="approach">
   <div class="container">
-    <div class="section-header reveal">
-      <div class="section-label">Books</div>
-      <h2>把實話寫成書</h2>
-      <p>讓法律的智慧，變成隨手可翻閱的溫暖陪伴</p>
+    <div class="section-header fade-up">
+      <div class="section-label">Approach</div>
+      <h2>我們的治療哲學</h2>
+      <p>不只看病，而是看一個人——從根源改善健康</p>
     </div>
-    <div class="books-showcase">
-      <div class="book-feature">
-        <div class="book-visual reveal-left">
-          <img src="assets/shinchan_book.webp" alt="著作">
-        </div>
-        <div class="book-text reveal-right">
-          <span class="section-label">Featured</span>
-          <h3>誰說只是約會，你就不用懂法律？</h3>
-          <p>約會、分手、結婚、離婚——感情中的每一步，都有法律的影子。無糖律師用最白的話，教你聽懂情感中的法律必修學分。</p>
-          <div class="book-events">
-            <span>📖 簽書會</span>
-            <span>🎙️ 法白放大鏡</span>
-            <span>🏛️ 市圖推薦</span>
-          </div>
-        </div>
+    <div class="steps-grid">
+      <div class="step-card fade-up">
+        <div class="step-num">01</div>
+        <h4>全面評估</h4>
+        <p>不只診斷疾病，更深入了解您的體質、生活型態與健康目標</p>
       </div>
-    </div>
-    <div class="book-covers-row">
-      <a href="#" class="book-cover-link">
-        <img src="assets/book_negotiation.png" alt="談判是心理戰" class="book-thumb">
-        <span>談判是心理戰</span>
-      </a>
-      <a href="#" class="book-cover-link">
-        <img src="assets/book_relationship.png" alt="關係心理學" class="book-thumb">
-        <span>關係心理學</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ COURSES ═══ -->
-<section class="section" id="courses">
-  <div class="container">
-    <div class="courses-grid">
-      <div class="courses-text reveal-left">
-        <div class="section-label">Courses</div>
-        <h2>識人談判課</h2>
-        <p class="lead">直指人心的五大談判風格</p>
-        <p>精準談出好關係、好工作、好人生！無糖律師親自設計的談判課程，從心理戰到實戰演練，讓你聽懂對方的真話，說出自己想說的話。</p>
-        <div class="course-highlights">
-          <span>🎯 五大談判風格</span>
-          <span>🤝 實戰演練</span>
-          <span>📊 心理分析</span>
-          <span>💼 職場應用</span>
-        </div>
+      <div class="step-card fade-up">
+        <div class="step-num">02</div>
+        <h4>整合方案</h4>
+        <p>結合常規醫學與整合輔助療法，量身打造最適合您的治療計畫</p>
       </div>
-      <div class="courses-visual reveal-right">
-        <img src="assets/shinchan_point.webp" alt="識人談判課">
+      <div class="step-card fade-up">
+        <div class="step-num">03</div>
+        <h4>追蹤調整</h4>
+        <p>定期追蹤治療成效，動態調整方案，確保最佳健康效益</p>
+      </div>
+      <div class="step-card fade-up">
+        <div class="step-num">04</div>
+        <h4>健康賦能</h4>
+        <p>不只是治療，更教會您如何自主管理健康，成為自己健康的主人</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ CTA ═══ -->
-<section class="cta-section" id="contact">
+<!-- ═══ CLINIC HOURS ═══ -->
+<section class="section" id="hours">
   <div class="container">
-    <div class="reveal-scale">
-      <div class="section-label">Connect</div>
-      <h2>追蹤無糖律師</h2>
-      <p>不漏接每一場直話直說</p>
-      <div class="mascot-inline">
-        <img src="assets/shinchan_point.webp" alt="追蹤" class="mascot-thumb">
-        <span class="mascot-speech">追起來，保證不加糖。</span>
+    <div class="section-header fade-up">
+      <div class="section-label">Hours</div>
+      <h2>門診時間</h2>
+      <p>歡迎來電預約，讓我們為您安排最適合的看診時間</p>
+    </div>
+    <div class="hours-wrapper fade-up">
+      <table class="hours-table">
+        <thead>
+          <tr><th>星期</th><th>上午 09:00–12:00</th><th>下午 14:00–17:00</th><th>晚上 17:30–20:30</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="day-label">星期一</td><td class="time-slot">—</td><td class="time-slot">●</td><td class="time-slot">●</td></tr>
+          <tr><td class="day-label">星期二</td><td class="time-slot">▲</td><td class="time-slot">●</td><td class="time-slot">▲</td></tr>
+          <tr><td class="day-label">星期三</td><td class="time-slot">—</td><td class="time-slot">●</td><td class="time-slot">●</td></tr>
+          <tr><td class="day-label">星期四</td><td class="time-slot">▲</td><td class="time-slot">●</td><td class="time-slot">▲</td></tr>
+          <tr><td class="day-label">星期五</td><td class="time-slot">—</td><td class="time-slot">●</td><td class="time-slot">●</td></tr>
+          <tr><td class="day-label">星期六</td><td class="time-slot">—</td><td class="time-slot">—</td><td class="time-slot closed">休診</td></tr>
+          <tr><td class="day-label">星期日</td><td class="time-slot closed" colspan="3">休診</td></tr>
+        </tbody>
+      </table>
+      <div class="hours-note">
+        ● 健保診 — 休診前15分鐘停止掛號<br>
+        ▲ 美顏針特約門診，請來電預約 (03) 961-0678
       </div>
-      <div class="social-links">
-        <a href="https://www.facebook.com/people/%E7%84%A1%E7%B3%96%E5%BE%8B%E5%B8%AB/100063736917545/" class="social-btn" target="_blank"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/ainsleyhslawyer/" class="social-btn" target="_blank"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.youtube.com/@%E7%84%A1%E7%B3%96%E5%BE%8B%E5%B8%AB" class="social-btn" target="_blank"><i class="bi bi-youtube"></i></a>
-        <a href="https://ainsley.com.tw" class="social-btn" target="_blank"><i class="bi bi-globe"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA / CONTACT ═══ -->
+<section class="section-teal cta-section" id="contact">
+  <div class="container">
+    <div class="fade-up">
+      <div class="section-label" style="color: var(--amber-300);">Contact</div>
+      <h2>開始您的健康旅程</h2>
+      <p>無論是疾病諮詢、健康檢查或整合輔助醫學評估，<br>伊萊診所都誠摯歡迎您的到來。</p>
+      <div class="contact-grid">
+        <div class="contact-item fade-up">
+          <div class="contact-icon"><i class="bi bi-telephone"></i></div>
+          <h4>電話預約</h4>
+          <p><a href="tel:039610678">(03) 961-0678</a></p>
+        </div>
+        <div class="contact-item fade-up">
+          <div class="contact-icon"><i class="bi bi-geo-alt"></i></div>
+          <h4>診所地址</h4>
+          <p>宜蘭縣羅東鎮興東路159號</p>
+        </div>
+        <div class="contact-item fade-up">
+          <div class="contact-icon"><i class="bi bi-clock"></i></div>
+          <h4>門診時間</h4>
+          <p>週一至週五<br>上午 09:00–12:00／下午 14:00–17:00／晚上 17:30–20:30</p>
+        </div>
       </div>
-      <div class="cta-note">
-        <small>無糖律師 Ainsley · 駿日股份有限公司 · 直話直說，不拐彎抹角</small>
+      <div class="cta-actions" style="margin-top: 2rem;">
+        <a href="tel:039610678" class="btn btn-primary" style="background: white; color: var(--teal-700); border-color: white;"><i class="bi bi-telephone"></i> (03) 961-0678</a>
+        <a href="https://maps.google.com/?q=宜蘭縣羅東鎮興東路159號" class="btn btn-outline" style="border-color: var(--amber-400); color: var(--amber-300);" target="_blank"><i class="bi bi-geo-alt"></i> Google Maps</a>
       </div>
     </div>
   </div>
@@ -294,31 +260,34 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <span class="brand-name">無糖談心室</span>
-        <p>不說場面話，只說實話。<br>用小新律師陪你聽懂話中話。</p>
+        <div class="footer-logo"><img src="assets/logo.svg" alt="伊萊診所"></div>
+        <p>座落於宜蘭好山好水之間，<br>由心臟血管內科權威施奕仲院長創立。<br>宜蘭縣羅東鎮興東路159號</p>
       </div>
       <div class="footer-col">
-        <h4>內容</h4>
-        <a href="#interviews">訪談</a>
-        <a href="#lectures">講座</a>
-        <a href="#books">著作</a>
-        <a href="#courses">課程</a>
+        <h4>服務項目</h4>
+        <a href="#services">分子點滴治療</a>
+        <a href="#services">靜脈雷射</a>
+        <a href="#services">SIS 磁場治療</a>
+        <a href="#services">氫氣治療</a>
+        <a href="#services">EECP 體外反搏</a>
       </div>
       <div class="footer-col">
-        <h4>連結</h4>
-        <a href="https://ainsley.com.tw" target="_blank">官方網站</a>
-        <a href="https://www.youtube.com/@%E7%84%A1%E7%B3%96%E5%BE%8B%E5%B8%AB" target="_blank">YouTube</a>
-        <a href="https://www.instagram.com/ainsleyhslawyer/" target="_blank">Instagram</a>
+        <h4>關於我們</h4>
+        <a href="#about">診所介紹</a>
+        <a href="#doctor">醫師介紹</a>
+        <a href="#approach">治療哲學</a>
+        <a href="#hours">門診時間</a>
       </div>
       <div class="footer-col">
-        <h4>設計</h4>
-        <span class="design-credit">侘寂 × 黃金比例</span>
-        <span class="design-credit">蠟筆小新 LoRA 生成</span>
+        <h4>聯絡資訊</h4>
+        <a href="tel:039610678">(03) 961-0678</a>
+        <a href="https://maps.google.com/?q=宜蘭縣羅東鎮興東路159號" target="_blank">診所位置</a>
+        <a href="#contact">預約諮詢</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 駿日股份有限公司</span>
-      <span>無糖談心室 · 小新律師實驗版 🖋️</span>
+      <span>&copy; 2026 伊萊診所. All rights reserved.</span>
+      <span>宜蘭 · 整合輔助醫學</span>
     </div>
   </div>
 </footer>
