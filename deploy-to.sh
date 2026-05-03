@@ -18,6 +18,11 @@ GIT_NAME="Hermes Agent"
 GIT_EMAIL="hermes@nousresearch.com"
 STAGING_DIR="$(cd "$(dirname "$0")" && pwd)"
 
+# ── 載入 .env（選擇性 Vercel token） ──
+if [ -f "$STAGING_DIR/.env" ]; then
+    set -a; source "$STAGING_DIR/.env"; set +a
+fi
+
 # ── 目標對照表 ──
 declare -A TARGETS
 TARGETS[ainsley]="git@github.com:julian67chou/ainsley-site.git"
@@ -98,6 +103,19 @@ else
     echo ""
     echo "✅ 已推送至 ${TARGETS[$TARGET]}"
     echo "⏳ Vercel 自動部屬中 ..."
+
+    # ── 選擇性 Vercel cache purge ──
+    if [ -n "${VERCEL_TOKEN:-}" ] && [ -n "${VERCEL_TEAM:-}" ]; then
+        echo ""
+        echo "🧹 清除 Vercel CDN cache ..."
+        DOMAIN="${TARGET}.vercel.app"
+        curl -sf -X POST "https://api.vercel.com/v1/edge-cache/purge" \
+            -H "Authorization: Bearer $VERCEL_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d "{\"teamId\":\"$VERCEL_TEAM\",\"domains\":[\"$DOMAIN\"]}" \
+            >/dev/null 2>&1 && echo "   ✅ cache purged" || echo "   ⚠️  purge API 失敗（不影響部屬）"
+    fi
+
     echo ""
     echo "📎 線上檢查:"
     case "$TARGET" in
