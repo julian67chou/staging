@@ -1,16 +1,20 @@
 #!/usr/bin/env bash
 # ============================================================
 # deploy-to.sh — 從 staging 沙盒同步檔案到 production repo
-# 用法: ./deploy-to.sh <target> <file1> [file2 ...]
+# 用法:
+#   ./deploy-to.sh <target> <file1> [file2 ...]   # 特定檔案
+#   ./deploy-to.sh <target> --all                  # 全專案
 #
 # 目標:
 #   ainsley   → julian67chou/ainsley-site (Vercel: ainsley-site)
+#   elai      → julian67chou/elai
+#   elai-exp  → julian67chou/elai-experiment (Vercel: elai-experiment)
 #   staging   → julian67chou/staging (本 repo，快照用)
 #
 # 範例:
 #   ./deploy-to.sh ainsley index.html news.html
-#   ./deploy-to.sh ainsley news_page_2.html news_page_3.html
-#   ./deploy-to.sh ainsley service.html
+#   ./deploy-to.sh ainsley news_page_2.html service.html
+#   ./deploy-to.sh elai --all           # 全專案同步（含圖片/js/css）
 # ============================================================
 set -euo pipefail
 
@@ -32,6 +36,7 @@ TARGETS[staging]="git@github.com:julian67chou/staging.git"
 
 usage() {
     echo "用法: $0 <target> <file1> [file2 ...]"
+    echo "      $0 <target> --all"
     echo ""
     echo "可用目標:"
     for t in "${!TARGETS[@]}"; do
@@ -40,7 +45,7 @@ usage() {
     echo ""
     echo "範例:"
     echo "  $0 ainsley index.html news.html"
-    echo "  $0 ainsley news_page_2.html service.html"
+    echo "  $0 elai --all"
     exit 1
 }
 
@@ -54,7 +59,7 @@ if [ -z "$REPO" ]; then
 fi
 
 if [ $# -eq 0 ]; then
-    echo "❌ 請指定要同步的檔案"
+    echo "❌ 請指定要同步的檔案，或使用 --all 全專案同步"
     usage
 fi
 
@@ -72,27 +77,56 @@ else
     git config user.email "$GIT_EMAIL"
 fi
 
-# ── 複製檔案 ──
-COPIED=()
-MISSING=()
-for f in "$@"; do
-    if [ -f "$STAGING_DIR/$f" ]; then
-        cp "$STAGING_DIR/$f" "$WORK_DIR/$f"
-        COPIED+=("$f")
-        echo "  ✅ $f"
+# ── 判斷模式：--all（全專案）或特定檔案 ──
+FULL_SYNC=false
+FILE_ARGS=()
+for arg in "$@"; do
+    if [ "$arg" = "--all" ]; then
+        FULL_SYNC=true
     else
-        MISSING+=("$f")
-        echo "  ⚠️  找不到: $STAGING_DIR/$f"
+        FILE_ARGS+=("$arg")
     fi
 done
 
-if [ ${#COPIED[@]} -eq 0 ]; then
-    echo "❌ 沒有檔案可同步"
-    exit 1
+if $FULL_SYNC; then
+    echo "📦 全專案同步（略過 .git / .vercel / .env / 工具腳本）..."
+    rsync -a --delete \
+        --exclude='.git' \
+        --exclude='.vercel' \
+        --exclude='.env' \
+        --exclude='deploy-to.sh' \
+        --exclude='split_news_pages.py' \
+        "$STAGING_DIR/" "$WORK_DIR/" 2>&1 | tail -5
+    COPIED=("全專案")
+    MSG="Full sync from staging"
+else
+    if [ ${#FILE_ARGS[@]} -eq 0 ]; then
+        echo "❌ 請指定要同步的檔案，或使用 --all 全專案同步"
+        usage
+    fi
+
+    # ── 複製指定檔案 ──
+    COPIED=()
+    MISSING=()
+    for f in "${FILE_ARGS[@]}"; do
+        if [ -f "$STAGING_DIR/$f" ]; then
+            cp "$STAGING_DIR/$f" "$WORK_DIR/$f"
+            COPIED+=("$f")
+            echo "  ✅ $f"
+        else
+            MISSING+=("$f")
+            echo "  ⚠️  找不到: $STAGING_DIR/$f"
+        fi
+    done
+
+    if [ ${#COPIED[@]} -eq 0 ]; then
+        echo "❌ 沒有檔案可同步"
+        exit 1
+    fi
+    MSG="Sync from staging: ${COPIED[*]}"
 fi
 
 # ── commit & push ──
-MSG="Sync from staging: ${COPIED[*]}"
 cd "$WORK_DIR"
 git add -A
 if git diff --cached --quiet; then
