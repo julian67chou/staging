@@ -3,66 +3,68 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/icon@16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/icon@32.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <title>最新分享 | 無糖談心室</title>
-  <meta name="description" content="無糖律師最新文章分享 - 談判心理學、法律知識、溝通技巧">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icon@32.png">
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif;background:#f5f5f0;color:#333;line-height:1.6}
-    .wrapper{max-width:1200px;margin:0 auto;padding:0 20px}
-    .brand-header{background:#2D4A3E;padding:18px 0;position:sticky;top:0;z-index:100}
-    .brand-header .wrapper{display:flex;align-items:center;justify-content:space-between}
-    .brand-header .logo{color:#F5F5F0;font-size:22px;font-weight:700;text-decoration:none;letter-spacing:1px}
-    .brand-header .logo span{color:#C8963E}
-    .brand-header nav a{color:#ccc;text-decoration:none;margin-left:24px;font-size:14px;transition:color .2s}
-    .brand-header nav a:hover,.brand-header nav a.active{color:#C8963E}
-    .page-title{text-align:center;padding:48px 0 32px}
-    .page-title .en{color:#C8963E;font-size:14px;letter-spacing:4px;text-transform:uppercase;margin-bottom:4px}
-    .page-title .ch{color:#2D4A3E;font-size:28px;font-weight:700}
-    .category{display:flex;justify-content:center;gap:12px;margin-bottom:36px;flex-wrap:wrap}
-    .category-item{color:#666;text-decoration:none;font-size:14px;padding:6px 18px;border:1px solid #ddd;border-radius:20px;transition:all .2s}
-    .category-item:hover,.category-item.active{color:#F5F5F0;background:#2D4A3E;border-color:#2D4A3E}
-    .news-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:48px}
-    @media(max-width:768px){.news-grid{grid-template-columns:1fr}}
-    .news-card{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);transition:transform .2s,box-shadow .2s}
-    .news-card:hover{transform:translateY(-3px);box-shadow:0 6px 24px rgba(0,0,0,.1)}
-    .news-card .img{height:200px;background-size:cover;background-position:center}
-    .news-card .body{padding:20px}
-    .news-card h3{color:#2D4A3E;font-size:17px;font-weight:600;margin-bottom:8px;line-height:1.4}
-    .news-card p{color:#666;font-size:14px;line-height:1.6;margin-bottom:14px}
-    .news-card .more{color:#C8963E;text-decoration:none;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:4px;transition:gap .2s}
-    .news-card .more:hover{gap:8px}
-    .pagination-wrap{display:flex;justify-content:center;align-items:center;padding:32px 0 56px;gap:6px}
-    .page-btn{display:inline-flex;align-items:center;justify-content:center;min-width:40px;height:40px;padding:0 8px;border:2px solid #ddd;border-radius:8px;background:#fff;color:#888;font-size:14px;font-weight:600;text-decoration:none;transition:all .2s}
-    .page-btn:hover{border-color:#2D4A3E;color:#2D4A3E;background:#f0f5ee}
-    .page-btn.active{border-color:#2D4A3E;background:#2D4A3E;color:#F5F5F0;box-shadow:0 2px 8px rgba(45,74,62,.25)}
-    .page-btn.next{font-size:13px;gap:4px;padding:0 16px;letter-spacing:1px}
-    .page-btn.prev{font-size:13px;gap:4px;padding:0 16px;letter-spacing:1px}
-    .fixed{position:fixed;right:20px;bottom:20px;z-index:50}
-    .fixed .d_flex{display:flex;flex-direction:column;align-items:center;gap:8px}
-    .fixed a{color:#2D4A3E;text-decoration:none;font-size:12px;display:flex;flex-direction:column;align-items:center}
-    .fixed .top{color:#C8963E}
-    footer{background:#2D4A3E;color:#bbb;padding:24px 0;font-size:13px;text-align:center}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif;background:#fff;color:#3e3a39;line-height:1.6;padding-top:50px}
+    .wrapper{max-width:1000px;margin:0 auto;padding:0 20px}
+    
+    /* Header */
+    .header-wrap{position:fixed;top:0;left:0;width:100%;z-index:10;background:#b8afa0;display:flex;align-items:center;justify-content:center;height:50px}
+    .header-wrap .logo{background:#3e3a39;color:#fff;width:70px;padding:22px 12px 10px;position:absolute;top:0;left:100px;text-align:center;font-size:12px;letter-spacing:1px;text-decoration:none;font-weight:700}
+    .header-wrap nav{display:flex;gap:24px;align-items:center}
+    .header-wrap nav a{color:rgba(255,255,255,.8);text-decoration:none;font-size:13px;letter-spacing:1px;transition:color .2s}
+    .header-wrap nav a:hover,.header-wrap nav a.active{color:#fff}
+    
+    /* Page Title */
+    .page-title{display:flex;align-items:baseline;justify-content:center;gap:12px;padding:48px 0 32px}
+    .page-title .en{color:#715951;font-size:14px;letter-spacing:3px;text-transform:uppercase;font-weight:400}
+    .page-title .ch{color:#3e3a39;font-size:24px;font-weight:500}
+    
+    /* Category */
+    .category{display:flex;justify-content:center;gap:8px;margin-bottom:36px;flex-wrap:wrap}
+    .category-item{color:#666;text-decoration:none;font-size:13px;padding:4px 14px;border:1px solid #ddd;border-radius:15px;transition:all .2s}
+    .category-item:hover,.category-item.active{color:#fff;background:#b8afa0;border-color:#b8afa0}
+    
+    /* News Grid — single column like original */
+    .news-list{margin-bottom:48px}
+    .news-card{display:flex;gap:24px;margin-bottom:24px;background:#fff;border:1px solid #ededeb;border-radius:0;overflow:hidden;transition:box-shadow .2s}
+    .news-card:hover{box-shadow:0 2px 12px rgba(0,0,0,.06)}
+    .news-card .img{width:260px;min-height:160px;background-size:cover;background-position:center;flex-shrink:0}
+    .news-card .body{flex:1;padding:20px 20px 20px 0;display:flex;flex-direction:column;justify-content:space-between}
+    .news-card h3{color:#3e3a39;font-size:17px;font-weight:500;margin-bottom:8px;line-height:1.4}
+    .news-card p{color:#666;font-size:14px;line-height:1.7;margin-bottom:14px;flex:1}
+    .news-card .more{display:block;width:100%;background:#eceae7;color:#b8afa0;text-align:center;padding:10px 10px;font-size:16px;font-style:italic;text-decoration:none;letter-spacing:2px;transition:background .2s,color .2s}
+    .news-card .more:hover{background:#b8afa0;color:#fff}
+    @media(max-width:768px){.news-card{flex-direction:column}.news-card .img{width:100%;height:180px}.news-card .body{padding:16px}}
+    
+    /* Pagination */
+    .pagination-wrap{display:flex;justify-content:center;align-items:center;padding:28px 0 48px;gap:4px;background:#ededeb;margin:0 auto 40px;max-width:400px;border-radius:4px}
+    .page-btn{display:inline-flex;align-items:center;justify-content:center;min-width:36px;height:36px;padding:0 6px;border:none;border-radius:0;background:transparent;color:#666;font-size:14px;text-decoration:none;transition:all .2s;font-weight:400}
+    .page-btn:hover{background:#b8afa0;color:#fff}
+    .page-btn.active{background:#b8afa0;color:#fff}
+    .page-btn.next,.page-btn.prev{font-size:12px;padding:0 12px;letter-spacing:1px}
+    
+    /* Footer */
+    footer{background:#b8afa0;color:#fff;padding:16px 20px;font-size:12px;text-align:center}
   </style>
 </head>
 <body>
-  <header class="brand-header">
-    <div class="wrapper">
-      <a href="index.html" class="logo">無糖<span>談心室</span></a>
-      <nav>
-        <a href="index.html">首頁</a>
-        <a href="news.html" class="active">最新分享</a>
-        <a href="service.html">服務項目</a>
-        <a href="book_negotiation.html">書籍著作</a>
-      </nav>
-    </div>
+  <header class="header-wrap">
+    <a href="index.html" class="logo">無糖談心室</a>
+    <nav>
+      <a href="index.html">首頁</a>
+      <a href="news.html" class="active">最新分享</a>
+      <a href="service.html">服務項目</a>
+      <a href="book_negotiation.html">書籍著作</a>
+    </nav>
   </header>
   <div class="wrapper">
     <div class="page-title">
-      <div class="en">News</div>
-      <div class="ch">最新分享</div>
+      <span class="en">News</span>
+      <span class="ch">最新分享</span>
     </div>
     <div class="category">
       <a href="news.html" class="category-item active">ALL</a>
@@ -72,14 +74,14 @@
       <a href="news.html?category=finance" class="category-item">活動花絮</a>
       <a href="news.html?category=other" class="category-item">其他</a>
     </div>
-    <div class="news-grid">
+    <div class="news-list">
       <div class="news-card">
         <div class="img" style="background-image:url('upload/news/0.jpeg')"></div>
         <div class="body">
           <h3>趙少康專訪無糖律師《誰說只是約會，你就不用懂法律？》</h3>
           <p>遇到愛慕者變成跟蹤狂該如何是好? 別怕! 趕快學習「跟蹤騷擾防制法」來保護自己! 什麼行為會符合法律定義的「跟騷行為」呢?<br />
 一起來看看!</p>
-          <a href="news_detail.php?id=7" class="more">MORE &rarr;</a>
+          <a href="https://ainsley.com.tw/news_detail.php?id=7" class="more" target="_blank">MORE</a>
         </div>
       </div>
       <div class="news-card">
@@ -87,7 +89,7 @@
         <div class="body">
           <h3>2024永豐銀行勞資講座(高雄場)</h3>
           <p>永豐銀行特別邀請無糖律師主持全省巡迴講座，一起來看看律師如何幫助創業家們掌握訂定契約的關鍵技巧、擬訂策略，進而預防勞資爭議。</p>
-          <a href="news_detail.php?id=11" class="more">MORE &rarr;</a>
+          <a href="https://ainsley.com.tw/news_detail.php?id=11" class="more" target="_blank">MORE</a>
         </div>
       </div>
       <div class="news-card">
@@ -95,7 +97,7 @@
         <div class="body">
           <h3>吳淡如專訪無糖律師(1)</h3>
           <p>婚前契約要簽嗎? 嫁給有錢人就代表從此高枕無憂嗎? 男女交往時濃情蜜意，我的就是你的，但感情生變時，我要把之前送你的禮物拿回來可以嗎?!</p>
-          <a href="news_detail.php?id=1" class="more">MORE &rarr;</a>
+          <a href="https://ainsley.com.tw/news_detail.php?id=1" class="more" target="_blank">MORE</a>
         </div>
       </div>
       <div class="news-card">
@@ -103,7 +105,7 @@
         <div class="body">
           <h3>范瑞杰專訪無糖律師</h3>
           <p>濾鏡開很大的直播主，真實面目原來騙很大?! 在發現直播主的「真面目」後，我可以請求直播主返還先前送的禮物和「斗內」過的金錢嗎?</p>
-          <a href="news_detail.php?id=4" class="more">MORE &rarr;</a>
+          <a href="https://ainsley.com.tw/news_detail.php?id=4" class="more" target="_blank">MORE</a>
         </div>
       </div>
       <div class="news-card">
@@ -111,7 +113,7 @@
         <div class="body">
           <h3>誠品職人李承軒專訪無糖律師</h3>
           <p>誰說只是約會，你就不用懂法律? 從追求、交往、結婚、到分手，感情總是清官難斷。無糖律師如何看待感情裡的法律陷阱？要注意哪些事才不會官司纏身？</p>
-          <a href="news_detail.php?id=9" class="more">MORE &rarr;</a>
+          <a href="https://ainsley.com.tw/news_detail.php?id=9" class="more" target="_blank">MORE</a>
         </div>
       </div>
       <div class="news-card">
@@ -119,25 +121,19 @@
         <div class="body">
           <h3>2024永豐銀行勞資講座(台中場)</h3>
           <p>永豐銀行特別邀請無糖律師主持全省巡迴講座，一起來看看律師如何幫助創業家們掌握訂定契約的關鍵技巧、擬訂策略，進而預防勞資爭議。</p>
-          <a href="news_detail.php?id=13" class="more">MORE &rarr;</a>
+          <a href="https://ainsley.com.tw/news_detail.php?id=13" class="more" target="_blank">MORE</a>
         </div>
       </div>
     </div>
     <div class="pagination-wrap">
-      <a href="news.html" class="page-btn prev">&larr; 上一頁</a>
+      <a href="news.html" class="page-btn prev">← 上一頁</a>
       <a href="news.html" class="page-btn">1</a>
       <span class="page-btn active">2</span>
       <a href="news_page_3.html" class="page-btn">3</a>
       <a href="news_page_4.html" class="page-btn">4</a>
-      <a href="news_page_3.html" class="page-btn next">下一頁 &rarr;</a>
-    </div>
-
-  </div>
-  <div class="fixed">
-    <div class="d_flex">
-      <a href="#" class="top">&uarr;<br>TOP</a>
+      <a href="news_page_3.html" class="page-btn next">下一頁 →</a>
     </div>
   </div>
-  <footer>Copyright &copy; 2025 不代表律師立場 版權所有 隱私權政策</footer>
+  <footer>Copyright © 2025 不代表律師立場 版權所有 隱私權政策</footer>
 </body>
 </html>
