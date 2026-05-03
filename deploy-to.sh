@@ -27,6 +27,7 @@ fi
 declare -A TARGETS
 TARGETS[ainsley]="git@github.com:julian67chou/ainsley-site.git"
 TARGETS[elai]="git@github.com:julian67chou/elai.git"
+TARGETS[elai-exp]="git@github.com:julian67chou/elai-experiment.git"
 TARGETS[staging]="git@github.com:julian67chou/staging.git"
 
 usage() {
@@ -118,8 +119,9 @@ else
     echo ""
     echo "📎 線上檢查:"
     case "$TARGET" in
-        ainsley) URL="https://ainsley-site.vercel.app" ;;
-        elai)    URL="https://elai.vercel.app" ;;
+        ainsley)  URL="https://ainsley-site.vercel.app" ;;
+        elai)     URL="https://elai.vercel.app" ;;
+        elai-exp) URL="https://elai-experiment.vercel.app" ;;
         *)       URL="" ;;
     esac
     if [ -n "$URL" ]; then
