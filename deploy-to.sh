@@ -26,9 +26,8 @@ fi
 # ── 目標對照表 ──
 declare -A TARGETS
 TARGETS[ainsley]="git@github.com:julian67chou/ainsley-site.git"
+TARGETS[elai]="git@github.com:julian67chou/elai.git"
 TARGETS[staging]="git@github.com:julian67chou/staging.git"
-# ↑ 可自行追加，例如：
-# TARGETS[elai]="git@github.com:julian67chou/elai.git"
 
 usage() {
     echo "用法: $0 <target> <file1> [file2 ...]"
@@ -119,9 +118,15 @@ else
     echo ""
     echo "📎 線上檢查:"
     case "$TARGET" in
-        ainsley) echo "   https://ainsley-site.vercel.app/${COPIED[0]}" ;;
-        *) echo "   等待 Vercel 部屬完成" ;;
+        ainsley) URL="https://ainsley-site.vercel.app" ;;
+        elai)    URL="https://elai.vercel.app" ;;
+        *)       URL="" ;;
     esac
+    if [ -n "$URL" ]; then
+        echo "   $URL/${COPIED[0]}"
+    else
+        echo "   等待 Vercel 部屬完成"
+    fi
 fi
 
 # ── 清理暫存？保留不動以便下次增量更新 ──
