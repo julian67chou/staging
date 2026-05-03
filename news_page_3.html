@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icon@16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icon@32.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>最新分享 | 無糖談心室</title>
+  <meta name="description" content="無糖律師最新文章分享 - 談判心理學、法律知識、溝通技巧">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif;background:#f5f5f0;color:#333;line-height:1.6}
+    .wrapper{max-width:1200px;margin:0 auto;padding:0 20px}
+    .brand-header{background:#2D4A3E;padding:18px 0;position:sticky;top:0;z-index:100}
+    .brand-header .wrapper{display:flex;align-items:center;justify-content:space-between}
+    .brand-header .logo{color:#F5F5F0;font-size:22px;font-weight:700;text-decoration:none;letter-spacing:1px}
+    .brand-header .logo span{color:#C8963E}
+    .brand-header nav a{color:#ccc;text-decoration:none;margin-left:24px;font-size:14px;transition:color .2s}
+    .brand-header nav a:hover,.brand-header nav a.active{color:#C8963E}
+    .page-title{text-align:center;padding:48px 0 32px}
+    .page-title .en{color:#C8963E;font-size:14px;letter-spacing:4px;text-transform:uppercase;margin-bottom:4px}
+    .page-title .ch{color:#2D4A3E;font-size:28px;font-weight:700}
+    .category{display:flex;justify-content:center;gap:12px;margin-bottom:36px;flex-wrap:wrap}
+    .category-item{color:#666;text-decoration:none;font-size:14px;padding:6px 18px;border:1px solid #ddd;border-radius:20px;transition:all .2s}
+    .category-item:hover,.category-item.active{color:#F5F5F0;background:#2D4A3E;border-color:#2D4A3E}
+    .news-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:48px}
+    @media(max-width:768px){.news-grid{grid-template-columns:1fr}}
+    .news-card{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);transition:transform .2s,box-shadow .2s}
+    .news-card:hover{transform:translateY(-3px);box-shadow:0 6px 24px rgba(0,0,0,.1)}
+    .news-card .img{height:200px;background-size:cover;background-position:center}
+    .news-card .body{padding:20px}
+    .news-card h3{color:#2D4A3E;font-size:17px;font-weight:600;margin-bottom:8px;line-height:1.4}
+    .news-card p{color:#666;font-size:14px;line-height:1.6;margin-bottom:14px}
+    .news-card .more{color:#C8963E;text-decoration:none;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:4px;transition:gap .2s}
+    .news-card .more:hover{gap:8px}
+    .pagination-wrap{display:flex;justify-content:center;align-items:center;padding:32px 0 56px;gap:6px}
+    .page-btn{display:inline-flex;align-items:center;justify-content:center;min-width:40px;height:40px;padding:0 8px;border:2px solid #ddd;border-radius:8px;background:#fff;color:#888;font-size:14px;font-weight:600;text-decoration:none;transition:all .2s}
+    .page-btn:hover{border-color:#2D4A3E;color:#2D4A3E;background:#f0f5ee}
+    .page-btn.active{border-color:#2D4A3E;background:#2D4A3E;color:#F5F5F0;box-shadow:0 2px 8px rgba(45,74,62,.25)}
+    .page-btn.next{font-size:13px;gap:4px;padding:0 16px;letter-spacing:1px}
+    .page-btn.prev{font-size:13px;gap:4px;padding:0 16px;letter-spacing:1px}
+    .fixed{position:fixed;right:20px;bottom:20px;z-index:50}
+    .fixed .d_flex{display:flex;flex-direction:column;align-items:center;gap:8px}
+    .fixed a{color:#2D4A3E;text-decoration:none;font-size:12px;display:flex;flex-direction:column;align-items:center}
+    .fixed .top{color:#C8963E}
+    footer{background:#2D4A3E;color:#bbb;padding:24px 0;font-size:13px;text-align:center}
+  </style>
+</head>
+<body>
+  <header class="brand-header">
+    <div class="wrapper">
+      <a href="index.html" class="logo">無糖<span>談心室</span></a>
+      <nav>
+        <a href="index.html">首頁</a>
+        <a href="news.html" class="active">最新分享</a>
+        <a href="service.html">服務項目</a>
+        <a href="book_negotiation.html">書籍著作</a>
+      </nav>
+    </div>
+  </header>
+  <div class="wrapper">
+    <div class="page-title">
+      <div class="en">News</div>
+      <div class="ch">最新分享</div>
+    </div>
+    <div class="category">
+      <a href="news.html" class="category-item active">ALL</a>
+      <a href="news.html?category=government" class="category-item">企業講座</a>
+      <a href="news.html?category=publishing" class="category-item">著作出版</a>
+      <a href="news.html?category=technology" class="category-item">演講座談</a>
+      <a href="news.html?category=finance" class="category-item">活動花絮</a>
+      <a href="news.html?category=other" class="category-item">其他</a>
+    </div>
+    <div class="news-grid">
+      <div class="news-card">
+        <div class="img" style="background-image:url('upload/news/0.jpeg')"></div>
+        <div class="body">
+          <h3>鄭弘儀&amp;朱姐專訪無糖律師</h3>
+          <p>原本以為是你情我願的一場浪漫邂逅，怎麼會演變成犯罪嫌疑人? 一不小心就被網友各種詐騙、仙人跳?! 以為他單身，原來他已婚? 如何保護自己?</p>
+          <a href="news_detail.php?id=6" class="more">MORE &rarr;</a>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="img" style="background-image:url('upload/news/1.jpeg')"></div>
+        <div class="body">
+          <h3>無糖律師校園講座</h3>
+          <p>無糖律師來明新科技大學舉辦校園講座了！&nbsp;一起學習和父母師長談出好關係！ 和男女朋友談出好感情！ 和潛在老闆談出好未來！</p>
+          <a href="news_detail.php?id=19" class="more">MORE &rarr;</a>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="img" style="background-image:url('upload/news/2.jpeg')"></div>
+        <div class="body">
+          <h3>無糖律師簽書會《誰說只是約會，你就不用懂法律?》</h3>
+          <p>愛情裡的鬼故事太多，也許就曾發生在你我身邊。遇上痴狂追求者、恐怖情人，甚至一秒變瘋子的前任，除了轉身快逃、拜佛消災，如何逢凶化吉自保防身？</p>
+          <a href="news_detail.php?id=14" class="more">MORE &rarr;</a>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="img" style="background-image:url('upload/news/3.jpeg')"></div>
+        <div class="body">
+          <h3>林書煒專訪無糖律師</h3>
+          <p>偷看情人手機犯法嗎? 被恐怖情人暴力相向，該如何保護自己? 情理法應如何排序?  法律是最後防線? 相愛相殺?  正在談戀愛的你，趕快來聽!</p>
+          <a href="news_detail.php?id=2" class="more">MORE &rarr;</a>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="img" style="background-image:url('upload/news/4.jpeg')"></div>
+        <div class="body">
+          <h3>吳淡如專訪無糖律師(2)</h3>
+          <p>在夜店遇到熱情如火的她，原以為兩情相悅，怎麼變成「乘機性交」? 它與「強制性交」有何不同?  一夜情後，莫名其妙地被對方告妨害性自主怎麼辦?</p>
+          <a href="news_detail.php?id=5" class="more">MORE &rarr;</a>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="img" style="background-image:url('upload/news/5.jpeg')"></div>
+        <div class="body">
+          <h3>趙庭專訪無糖律師</h3>
+          <p>如果一不小心被人跟蹤騷擾怎麼辦? 如何蒐集相關事證? 什麼樣的行為才會構成法律上定義的「跟騷行為」? 如何因應才能有效保障自己的人身安全?</p>
+          <a href="news_detail.php?id=3" class="more">MORE &rarr;</a>
+        </div>
+      </div>
+    </div>
+    <div class="pagination-wrap">
+      <a href="news_page_2.html" class="page-btn prev">&larr; 上一頁</a>
+      <a href="news.html" class="page-btn">1</a>
+      <a href="news_page_2.html" class="page-btn">2</a>
+      <span class="page-btn active">3</span>
+      <a href="news_page_4.html" class="page-btn">4</a>
+      <a href="news_page_4.html" class="page-btn next">下一頁 &rarr;</a>
+    </div>
+
+  </div>
+  <div class="fixed">
+    <div class="d_flex">
+      <a href="#" class="top">&uarr;<br>TOP</a>
+    </div>
+  </div>
+  <footer>Copyright &copy; 2025 不代表律師立場 版權所有 隱私權政策</footer>
+</body>
+</html>
