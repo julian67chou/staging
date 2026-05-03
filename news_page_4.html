@@ -2,113 +2,208 @@
 <html lang="zh-Hant-TW">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/icon16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/icon32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/icons/icon192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/icon180.png">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <title>最新分享 | 無糖談心室</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="images/icon@32.png">
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif;background:#fff;color:#3e3a39;line-height:1.6;padding-top:50px}
-    .wrapper{max-width:1000px;margin:0 auto;padding:0 20px}
-    
-    /* Header */
-    .header-wrap{position:fixed;top:0;left:0;width:100%;z-index:10;background:#b8afa0;display:flex;align-items:center;justify-content:center;height:50px}
-    .header-wrap .logo{background:#3e3a39;color:#fff;width:70px;padding:22px 12px 10px;position:absolute;top:0;left:100px;text-align:center;font-size:12px;letter-spacing:1px;text-decoration:none;font-weight:700}
-    .header-wrap nav{display:flex;gap:24px;align-items:center}
-    .header-wrap nav a{color:rgba(255,255,255,.8);text-decoration:none;font-size:13px;letter-spacing:1px;transition:color .2s}
-    .header-wrap nav a:hover,.header-wrap nav a.active{color:#fff}
-    
-    /* Page Title */
-    .page-title{display:flex;align-items:baseline;justify-content:center;gap:12px;padding:48px 0 32px}
-    .page-title .en{color:#715951;font-size:14px;letter-spacing:3px;text-transform:uppercase;font-weight:400}
-    .page-title .ch{color:#3e3a39;font-size:24px;font-weight:500}
-    
-    /* Category */
-    .category{display:flex;justify-content:center;gap:8px;margin-bottom:36px;flex-wrap:wrap}
-    .category-item{color:#666;text-decoration:none;font-size:13px;padding:4px 14px;border:1px solid #ddd;border-radius:15px;transition:all .2s}
-    .category-item:hover,.category-item.active{color:#fff;background:#b8afa0;border-color:#b8afa0}
-    
-    /* News Grid — single column like original */
-    .news-list{margin-bottom:48px}
-    .news-card{display:flex;gap:24px;margin-bottom:24px;background:#fff;border:1px solid #ededeb;border-radius:0;overflow:hidden;transition:box-shadow .2s}
-    .news-card:hover{box-shadow:0 2px 12px rgba(0,0,0,.06)}
-    .news-card .img{width:260px;min-height:160px;background-size:cover;background-position:center;flex-shrink:0}
-    .news-card .body{flex:1;padding:20px 20px 20px 0;display:flex;flex-direction:column;justify-content:space-between}
-    .news-card h3{color:#3e3a39;font-size:17px;font-weight:500;margin-bottom:8px;line-height:1.4}
-    .news-card p{color:#666;font-size:14px;line-height:1.7;margin-bottom:14px;flex:1}
-    .news-card .more{display:block;width:100%;background:#eceae7;color:#b8afa0;text-align:center;padding:10px 10px;font-size:16px;font-style:italic;text-decoration:none;letter-spacing:2px;transition:background .2s,color .2s}
-    .news-card .more:hover{background:#b8afa0;color:#fff}
-    @media(max-width:768px){.news-card{flex-direction:column}.news-card .img{width:100%;height:180px}.news-card .body{padding:16px}}
-    
-    /* Pagination */
-    .pagination-wrap{display:flex;justify-content:center;align-items:center;padding:28px 0 48px;gap:4px;background:#ededeb;margin:0 auto 40px;max-width:400px;border-radius:4px}
-    .page-btn{display:inline-flex;align-items:center;justify-content:center;min-width:36px;height:36px;padding:0 6px;border:none;border-radius:0;background:transparent;color:#666;font-size:14px;text-decoration:none;transition:all .2s;font-weight:400}
-    .page-btn:hover{background:#b8afa0;color:#fff}
-    .page-btn.active{background:#b8afa0;color:#fff}
-    .page-btn.next,.page-btn.prev{font-size:12px;padding:0 12px;letter-spacing:1px}
-    
-    /* Footer */
-    footer{background:#b8afa0;color:#fff;padding:16px 20px;font-size:12px;text-align:center}
-  </style>
-</head>
-<body>
-  <header class="header-wrap">
-    <a href="index.html" class="logo">無糖談心室</a>
+  <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link href="assets/css/style.css" rel="stylesheet">
+<title>NEW精選最新文章分享</title>
+<meta name="description" content="在這裡有關於法律、溝通、談判、協談等相關的學習連結以及知識分享，全部都屬精粹純煉，不加糖摻水，歡迎大家一起來尋寶！">
+<meta property="og:description" content="在這裡有關於法律、溝通、談判、協談等相關的學習連結以及知識分享，全部都屬精粹純煉，不加糖摻水，歡迎大家一起來尋寶！">
+<meta property="og:image" content="https://ainsley.com.tw/images/1200x630.jpg">
+<style>
+
+.news_img{width:100%;height:200px;background-size:cover;background-position:center;background-repeat:no-repeat;}
+article .item > div .news_img{background-size:cover!important;height:auto;padding-top:66.8269%;}
+</style></head>
+<body class="tw">
+  <noscript>Your browser does not support Javascript.</noscript>
+  <div class="preload_box"></div><script>document.querySelector(".preload_box")?.remove();</script>
+<div class="wrapper news">
+<header>
+  <div class="header_wrap">
+    <a href="./" class="logo">
+      <div class="logo_inner"></div>
+    </a>
     <nav>
-      <a href="index.html">首頁</a>
-      <a href="news.html" class="active">最新分享</a>
+     <div>
+        書籍著作
+        <div class="box">
+          <a href="book_negotiation.html">識人談判課</a>
+          <a href="book_relationship.html">誰說只是約會</a>
+        </div>
+      </div>
+      <!-- <a href="#">教學課程</a> -->
       <a href="service.html">服務項目</a>
-      <a href="book_negotiation.html">書籍著作</a>
+      <a href="news.html">最新分享</a>
+      <div>
+        影音專區
+        <div class="box">
+          <a href="video_instagram.html">Instagram</a>
+                                                                                        <a href="video_youtube_unsweetened.html">無糖不安靜</a>
+                                                        <a href="video_youtube_law.html">法律新觀點</a>
+                                            </div>
+      </div>
+      <a href="service.html#contact" class="nav_contact">聯絡我們</a>
     </nav>
-  </header>
-  <div class="wrapper">
-    <div class="page-title">
-      <span class="en">News</span>
-      <span class="ch">最新分享</span>
-    </div>
-    <div class="category">
-      <a href="news.html" class="category-item active">ALL</a>
-      <a href="news.html?category=government" class="category-item">企業講座</a>
-      <a href="news.html?category=publishing" class="category-item">著作出版</a>
-      <a href="news.html?category=technology" class="category-item">演講座談</a>
-      <a href="news.html?category=finance" class="category-item">活動花絮</a>
-      <a href="news.html?category=other" class="category-item">其他</a>
-    </div>
-    <div class="news-list">
-      <div class="news-card">
-        <div class="img" style="background-image:url('upload/news/0.jpeg')"></div>
-        <div class="body">
-          <h3>臺北市立圖書館 每月一書講座推薦圖書《誰說只是約會，你就不用懂法律？》</h3>
-          <p>臺北市立圖書館就每月一書講座系列，特別推薦圖書《誰說只是約會，你就不用懂法律？》，邀請本書作者無糖律師於總館 10 樓會議廳進行導讀分享。</p>
-          <a href="https://ainsley.com.tw/news_detail.php?id=16" class="more" target="_blank">MORE</a>
-        </div>
-      </div>
-      <div class="news-card">
-        <div class="img" style="background-image:url('upload/news/1.jpeg')"></div>
-        <div class="body">
-          <h3>2024校園講座</h3>
-          <p>談戀愛只會充滿粉紅色泡泡?  其實一不小心就踩到法律紅線。看無糖律師如何在笑聲不斷的互動時光中，悄悄地把正確法律觀念播種到孩子們心底。</p>
-          <a href="https://ainsley.com.tw/news_detail.php?id=17" class="more" target="_blank">MORE</a>
-        </div>
-      </div>
-      <div class="news-card">
-        <div class="img" style="background-image:url('upload/news/2.jpeg')"></div>
-        <div class="body">
-          <h3>法白放大鏡系列主題「照入性別權力的背光面」｜ 情感中的法律必修學分｜《誰說只是約會，你就不用懂法律？》</h3>
-          <p>法白放大鏡系列主題「照入性別權力的背光面」  情感中的法律必修學分｜《誰說只是約會，你就不用懂法律？》｜看無糖律師和記者蔣宜婷深入對談。</p>
-          <a href="https://ainsley.com.tw/news_detail.php?id=15" class="more" target="_blank">MORE</a>
-        </div>
-      </div>
-    </div>
-    <div class="pagination-wrap">
-      <a href="news_page_3.html" class="page-btn prev">← 上一頁</a>
-      <a href="news.html" class="page-btn">1</a>
-      <a href="news_page_2.html" class="page-btn">2</a>
-      <a href="news_page_3.html" class="page-btn">3</a>
-      <span class="page-btn active">4</span>
-      <span class="page-btn" style="color:#ccc;cursor:default">下一頁 →</span>
+    <div class="menu">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </div>
-  <footer>Copyright © 2025 不代表律師立場 版權所有 隱私權政策</footer>
+</header>
+
+    <section>
+      <div class="content">
+        <div class="title d_flex">
+          <div class="en">
+            <h6>News</h6>
+          </div>
+          <div class="ch">
+            <h6>最新分享</h6>
+          </div>
+        </div>
+
+        <!-- 分類 -->
+                          <div class="category">
+                                          <a href="news.html" class="category_item" style="background:#715951;color:#fff;">ALL</a>
+                                                        <a href="news.html" class="category_item">企業講座</a>
+                                                        <a href="news.html" class="category_item">著作出版</a>
+                                                        <a href="news.html" class="category_item">演講座談</a>
+                                                        <a href="news.html" class="category_item">活動花絮</a>
+                                                        <a href="news.html" class="category_item">其他</a>
+                                    </div>
+        
+        <article>
+<div class="item">
+                <div>
+                  <div class="news_img" style="background-image:url('assets/images/news/2de5b0e100bc991b22c9c4ffd7b90023.jpeg');background-size:cover;background-position:center;"></div>
+                  <div class="txt">
+                    <h6>趙庭專訪無糖律師</h6>
+                    <p>趙庭專訪無糖律師，暢談法律實務與生活應用。</p>
+                  </div>
+                </div>
+                <a href="news_detail_3.html" class="more">MORE</a>
+              </div>
+                          
+<div class="item">
+                <div>
+                  <div class="news_img" style="background-image:url('assets/images/news/d133aaaeae7695f297b3cd4b0c45a364.jpeg');background-size:cover;background-position:center;"></div>
+                  <div class="txt">
+                    <h6>林書煒專訪無糖律師</h6>
+                    <p>林書煒專訪無糖律師，探討法律知識如何應用於日常生活。</p>
+                  </div>
+                </div>
+                <a href="news_detail_2.html" class="more">MORE</a>
+              </div>
+                          
+<div class="item">
+                <div>
+                  <div class="news_img" style="background-image:url('assets/images/news/ee6c94aee5f8e7905c9ba9f15778f8f4.jpeg');background-size:cover;background-position:center;"></div>
+                  <div class="txt">
+                    <h6>吳淡如專訪無糖律師(1)</h6>
+                    <p>吳淡如專訪無糖律師，分享法律人的心路歷程與專業見解。</p>
+                  </div>
+                </div>
+                <a href="news_detail_1.html" class="more">MORE</a>
+              </div>
+                              
+</article>
+        <div class="pagination" style="text-align:center;padding:40px 0;">
+          <a href="news_page_3.html" style="display:inline-block;padding:6px 12px;margin:0 3px;background:#ededeb;color:#595757;border-radius:4px;font-size:13px;text-decoration:none;transition:background .2s,color .2s;" onmouseover="this.style.background='#b8afa0';this.style.color='#fff'" onmouseout="this.style.background='#ededeb';this.style.color='#595757'">← 上一頁</a>
+          <a href="news.html" style="display:inline-block;padding:6px 14px;margin:0 3px;background:#f0f0f0;color:#595757;border-radius:4px;font-size:14px;text-decoration:none;transition:background .2s,color .2s;" onmouseover="this.style.background='#b8afa0';this.style.color='#fff'" onmouseout="this.style.background='#f0f0f0';this.style.color='#595757'">1</a>
+          <a href="news_page_2.html" style="display:inline-block;padding:6px 14px;margin:0 3px;background:#f0f0f0;color:#595757;border-radius:4px;font-size:14px;text-decoration:none;transition:background .2s,color .2s;" onmouseover="this.style.background='#b8afa0';this.style.color='#fff'" onmouseout="this.style.background='#f0f0f0';this.style.color='#595757'">2</a>
+          <a href="news_page_3.html" style="display:inline-block;padding:6px 14px;margin:0 3px;background:#f0f0f0;color:#595757;border-radius:4px;font-size:14px;text-decoration:none;transition:background .2s,color .2s;" onmouseover="this.style.background='#b8afa0';this.style.color='#fff'" onmouseout="this.style.background='#f0f0f0';this.style.color='#595757'">3</a>
+          <span style="display:inline-block;padding:6px 14px;margin:0 3px;background:#715951;color:#fff;border-radius:4px;font-size:14px;">4</span>
+          <span style="display:inline-block;padding:6px 12px;margin:0 3px;background:#ededeb;color:#999;border-radius:4px;font-size:13px;cursor:default;">下一頁 →</span>
+        </div>
+
+      </div>
+    </section>
+  </div>
+  
+</div>
+<div class="pop pop_service" id="pop_service">
+  <div class="pop_wrap">
+    <div class="body">
+      <div class="content">
+        <div class="content_group">
+          <a href="#" class="close popup_close">
+            <span></span>
+            <span></span>
+          </a>
+          <div class="txt">
+            <h5></h5>
+            <div class="word">
+              <!-- <p>在法律的複雜世界中，您需要的不僅是建議，而是專業的指導。我們的法律諮詢服務旨在為您提供深入的法律分析與建議，無論是面對面、電話或視訊會議，我們的律師將針對您的具體情況，提供清晰且具體的法律意見，幫助您有效應對各種挑戰，確保您的權益得到充分保障。</p>
+              <p>在面對法律問題時，您需要不僅是建議，而是設身處地為您著想並富有專業的指導。我們依每人不同的需求，提供以口頭或書面的法律意見，無論是電話、視訊還是面對面會議，都將為您提供清晰、具體的法律建議，助您有效解決問題，維護您的權益。</p> -->
+            </div>
+            <div class="btn_wrap">
+              <a href="service.html#contact" class="btn">
+                <i></i>
+                <div>
+                  <p>前往預約</p>
+                  <span></span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  
+<div class="fixed">
+  <div class="d_flex">
+    <a href="https://search.books.com.tw/search/query/key/%E7%84%A1%E7%B3%96%E5%BE%8B%E5%B8%AB/cat/all" target="_blank" rel="noopener noreferrer" class="book_btn">
+      <p>
+        收藏著作
+        <img src="assets/images/main/fixed_book.png" alt="收藏著作">
+      </p>
+    </a>
+    <div class="media">
+              <a href="https://www.facebook.com/profile.php?id=100077095818950" class="icon fb" target="_blank" rel="noopener noreferrer">
+          <img src="assets/images/main/fb.png" alt="FB">
+        </a>
+                    <a href="https://www.instagram.com/attsugarfree/?utm_source=ig_embed&amp;ig_rid=30f19d2c-061a-439e-b936-ccab6b21410b" class="icon ig" target="_blank" rel="noopener noreferrer">
+          <img src="assets/images/main/ig.png" alt="IG">
+        </a>
+                    <a href="https://www.youtube.com/@%E7%84%A1%E7%B3%96%E5%BE%8B%E5%B8%AB" class="icon yt" target="_blank" rel="noopener noreferrer">
+          <img src="assets/images/main/yt.png" alt="YouTube">
+        </a>
+                    <a href="https://line.me/ti/g2/v6MeBMzLZNLWotm-WrmSPC0fk6w8FprIS9tvIQ?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default" class="icon line" target="_blank" rel="noopener noreferrer">
+          <img src="assets/images/main/line.png" alt="Line">
+        </a>
+                    <a href="https://podcasts.apple.com/tw/podcast/%E7%84%A1%E7%B3%96%E4%B8%8D%E5%AE%89%E9%9D%9C%E7%9A%84%E4%BA%BA%E7%94%9F%E8%A7%A3%E6%86%82bar/id1787171162" class="icon podcast" target="_blank" rel="noopener noreferrer">
+          <img src="assets/images/main/podcast.png" alt="Podcast">
+        </a>
+          </div>
+    <a href="#" class="top">
+      <img src="assets/images/main/top.png" alt="TOP">
+      <p>TOP</p>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="d_flex">
+    <p>Copyright © 2025 不代表律師立場 版權所有 隱私權政策</p>
+    <a href="https://jca-digital.com/" target="_blank" rel="noopener noreferrer">Design by JCA Creative Marketing
+      <i></i>
+    </a>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="assets/js/script.js"></script>
 </body>
 </html>

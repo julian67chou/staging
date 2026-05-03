@@ -2,170 +2,704 @@
 <html lang="zh-Hant-TW">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>無糖談心室 ｜Hi there, 我是無糖律師</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="images/icon@32.png">
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif;background:#fff;color:#3e3a39;line-height:1.6;padding-top:50px}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;height:auto}
-    .wrapper{max-width:1000px;margin:0 auto;padding:0 20px}
-
-    /* Header */
-    .header-wrap{position:fixed;top:0;left:0;width:100%;z-index:10;background:#b8afa0;display:flex;align-items:center;justify-content:center;height:50px}
-    .header-wrap .logo{background:#3e3a39;color:#fff;width:70px;padding:22px 12px 10px;position:absolute;top:0;left:100px;text-align:center;font-size:12px;letter-spacing:1px;font-weight:700}
-    .header-wrap nav{display:flex;gap:24px;align-items:center}
-    .header-wrap nav a{color:rgba(255,255,255,.8);font-size:13px;letter-spacing:1px;transition:color .2s}
-    .header-wrap nav a:hover{color:#fff}
-
-    /* Hero */
-    .hero{display:flex;align-items:center;justify-content:center;min-height:400px;background:linear-gradient(135deg,#eceae7 0%,#fff 100%);text-align:center;padding:60px 20px}
-    .hero h1{font-size:36px;color:#3e3a39;font-weight:500;margin-bottom:12px;letter-spacing:2px}
-    .hero p{color:#715951;font-size:16px;max-width:500px;margin:0 auto;line-height:1.8}
-
-    /* Section */
-    .section{padding:60px 20px}
-    .section-title{text-align:center;margin-bottom:40px}
-    .section-title .en{color:#b48080;font-size:13px;letter-spacing:3px;text-transform:uppercase;margin-bottom:6px}
-    .section-title h2{color:#3e3a39;font-size:22px;font-weight:500}
-
-    /* About */
-    .about{background:#ededeb}
-    .about-content{display:flex;gap:40px;align-items:flex-start}
-    .about-content .avatar{width:120px;height:120px;border-radius:50%;background:#b8afa0;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:36px;font-weight:300}
-    .about-content .bio{flex:1}
-    .about-content .bio h3{font-size:18px;color:#3e3a39;margin-bottom:8px;font-weight:500}
-    .about-content .bio p{color:#715951;font-size:14px;line-height:1.8}
-    .about-content .bio ul{list-style:none;margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
-    .about-content .bio ul li{background:#b8afa0;color:#fff;font-size:12px;padding:4px 12px;border-radius:2px;letter-spacing:1px}
-    @media(max-width:600px){.about-content{flex-direction:column;align-items:center;text-align:center}}
-
-    /* Books */
-    .books{display:grid;grid-template-columns:1fr 1fr;gap:30px}
-    @media(max-width:768px){.books{grid-template-columns:1fr}}
-    .book-card{background:#ededeb;padding:30px;text-align:center}
-    .book-card .cover{width:160px;height:220px;background:#b8afa0;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:48px}
-    .book-card h3{font-size:16px;color:#3e3a39;margin-bottom:8px;font-weight:500}
-    .book-card p{color:#715951;font-size:13px;line-height:1.7;margin-bottom:16px}
-    .book-btn{display:inline-block;background:#eceae7;color:#b8afa0;padding:10px 28px;font-size:13px;letter-spacing:2px;transition:background .2s,color .2s}
-    .book-btn:hover{background:#b8afa0;color:#fff}
-
-    /* Footer */
-    footer{background:#b8afa0;color:#fff;padding:16px 20px;font-size:12px;text-align:center}
-
-    /* Fixed sidebar */
-    .fixed-side{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:5;display:flex;flex-direction:column;gap:2px}
-    .fixed-side a{display:flex;align-items:center;justify-content:center;width:40px;height:40px;background:#eceae7;color:#b8afa0;font-size:16px;transition:background .2s,color .2s}
-    .fixed-side a:hover{background:#b8afa0;color:#fff}
-
-    /* Services */
-    .services-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
-    @media(max-width:768px){.services-grid{grid-template-columns:1fr}}
-    .service-item{text-align:center;padding:24px}
-    .service-item .icon{font-size:40px;color:#b8afa0;margin-bottom:12px}
-    .service-item h3{font-size:14px;color:#3e3a39;font-weight:500;margin-bottom:6px}
-    .service-item p{color:#715951;font-size:13px;line-height:1.6}
-  </style>
-</head>
-<body>
-  <header class="header-wrap">
-    <a href="./" class="logo">無糖談心室</a>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/icon16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/icon32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/icons/icon192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/icon180.png">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link href="assets/css/style.css" rel="stylesheet">
+<title>無糖談心室 ｜Hi there, 我是無糖律師</title>
+<meta name="description" content="在這裡有關於法律、溝通、談判、協談等相關的學習連結以及知識分享，全部都屬精粹純煉，不加糖摻水，歡迎大家一起來尋寶！">
+<meta property="og:description" content="在這裡有關於法律、溝通、談判、協談等相關的學習連結以及知識分享，全部都屬精粹純煉，不加糖摻水，歡迎大家一起來尋寶！">
+<meta property="og:image" content="https://ainsley.com.tw/upload/seo/eb4e936b6e76c4aa1f4d794e109469c9.jpeg">
+<style>.preload_box{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1037;background:#fff;}
+.news_img{width:100%;height:200px;background-size:cover;background-position:center;background-repeat:no-repeat;}
+article .item > div .news_img{background-size:cover!important;height:auto;padding-top:66.8269%;}</style></head>
+article .item > div .news_img{background-size:cover!important;}</style></head>
+<body class="tw">
+  <noscript>Your browser does not support Javascript.</noscript>
+  <div class="preload_box"></div><script>document.querySelector(".preload_box")?.remove();</script>
+<div class="wrapper index">
+<header>
+  <div class="header_wrap">
+    <a href="./" class="logo">
+      <div class="logo_inner"></div>
+    </a>
     <nav>
-      <a href="./">首頁</a>
-      <a href="news.html">最新分享</a>
+     <div>
+        書籍著作
+        <div class="box">
+          <a href="book_negotiation.html">識人談判課</a>
+          <a href="book_relationship.html">誰說只是約會</a>
+        </div>
+      </div>
+      <!-- <a href="#">教學課程</a> -->
       <a href="service.html">服務項目</a>
-      <a href="book_negotiation.html">書籍著作</a>
+      <a href="news.html">最新分享</a>
+      <div>
+        影音專區
+        <div class="box">
+          <a href="video_instagram.html">Instagram</a>
+                                                                                        <a href="video_youtube_unsweetened.html">無糖不安靜</a>
+                                                        <a href="video_youtube_law.html">法律新觀點</a>
+                                            </div>
+      </div>
+      <a href="service.html#contact" class="nav_contact">聯絡我們</a>
     </nav>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div>
-      <h1>Hi there, 我是無糖律師</h1>
-      <p>在這裡有關於法律、溝通、談判、協談等相關的學習連結以及知識分享，全部都屬精粹純煉，不加糖摻水，歡迎大家一起來尋寶！</p>
+    <div class="menu">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-  </section>
-
-  <!-- About -->
-  <section class="section about">
-    <div class="wrapper">
-      <div class="about-content">
-        <div class="avatar">A</div>
-        <div class="bio">
-          <h3>無糖律師 — 謝欣怡</h3>
-          <p>美國紐約大學法學碩士、台灣大學國際企業學研究所碩士。現任法律事務所主持律師、台灣上市櫃企業獨立董事。曾任美商銀行北亞區法律顧問/副總裁，擁有豐富的跨國商務與談判經驗。</p>
-          <ul>
-            <li>談判心理學</li>
-            <li>溝通協調</li>
-            <li>預防法學</li>
-            <li>企業講座</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Books -->
-  <section class="section" style="background:#fff">
-    <div class="wrapper">
-      <div class="section-title">
-        <div class="en">Books</div>
-        <h2>書籍著作</h2>
-      </div>
-      <div class="books">
-        <div class="book-card">
-          <div class="cover">📖</div>
-          <h3>識人談判課</h3>
-          <p>直指人心的五大談判風格，讓你精準談出好關係、好工作、好人生！</p>
-          <a href="https://www.books.com.tw/products/0011014337" class="book-btn" target="_blank">前往購買</a>
-        </div>
-        <div class="book-card">
-          <div class="cover">📖</div>
-          <h3>誰說只是約會，你就不用懂法律？</h3>
-          <p>24則感情法律學分，教你避開陷阱，降低傷害，遠離戀愛鬼故事</p>
-          <a href="https://www.books.com.tw/products/0010946750" class="book-btn" target="_blank">前往購買</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section class="section about">
-    <div class="wrapper">
-      <div class="section-title">
-        <div class="en">Services</div>
-        <h2>服務項目</h2>
-      </div>
-      <div class="services-grid">
-        <div class="service-item">
-          <div class="icon">⚖️</div>
-          <h3>法律顧問</h3>
-          <p>企業及個人法律諮詢、契約審閱、訴訟策略</p>
-        </div>
-        <div class="service-item">
-          <div class="icon">🤝</div>
-          <h3>談判策略</h3>
-          <p>商業談判、糾紛調解、預防法學規劃</p>
-        </div>
-        <div class="service-item">
-          <div class="icon">🎤</div>
-          <h3>企業講座</h3>
-          <p>勞資關係、溝通技巧、談判心理學教育訓練</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>Copyright © 2025 不代表律師立場 版權所有 隱私權政策</footer>
-
-  <!-- Fixed side -->
-  <div class="fixed-side">
-    <a href="https://www.facebook.com/profile.php?id=100077095818950" target="_blank">f</a>
-    <a href="https://www.instagram.com/attsugarfree/?utm_source=ig_embed" target="_blank">◻</a>
-    <a href="https://www.youtube.com/@%E7%84%A1%E7%B3%96%E5%BE%8B%E5%B8%AB" target="_blank">▶</a>
-    <a href="https://line.me/ti/g2/v6MeBMzLZNLWotm-WrmSPC0fk6w8FprIS9tvIQ" target="_blank">◉</a>
   </div>
+</header>
+
+    <style>.index .banner .show .item .banner_0{background-image: url('assets/images/banner/1e062f2d98f56878ca2e69f864d8e08c.jpeg');}@media screen and (max-width: 768px){.index .banner .show .item .banner_0{background-image: url('assets/images/banner/79573c3aaa42ba3dd4172b8c8a59161e.jpeg');}}.index .banner .show .item .banner_1{background-image: url('assets/images/banner/6c68d6f43a2d0255cf70b591debe49da.jpeg');}@media screen and (max-width: 768px){.index .banner .show .item .banner_1{background-image: url('assets/images/banner/e10c4e52bf332394055a3e49c434ef7b.jpeg');}}</style>      <section class="banner">
+      <div class="show">
+                              <div class="item">
+              <div class="banner_inner banner_0" aria-label=""></div>
+            </div>
+                      <div class="item">
+              <div class="banner_inner banner_1" aria-label=""></div>
+            </div>
+                        </div>
+    </section>
+      <!-- 切換 -->
+    <section class="s1">
+      <!-- 切換按鈕 -->
+      <div class="switch">
+        <a href="#" class="active">
+          <span></span>
+          <p>關於無糖</p>
+        </a>
+        <a href="#">
+          <span></span>
+          <p>書籍著作</p>
+        </a>
+        <a href="#">
+          <span></span>
+          <p>聯繫方式</p>
+        </a>
+      </div>
+      <div class="content">
+        <!-- 關於無糖 -->
+        <div class="item part1 active">
+          <div class="group d_flex">
+            <div class="img_inner wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
+              <img src="assets/images/index/s1_img.jpg" alt="">
+            </div>
+            <div class="txt wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.4s">
+              <div class="d_flex">
+                <h5>個人學經歷</h5>
+                <ul>
+                  <li>美國紐約大學法學碩士</li>
+                  <li>台灣大學國際企業學研究所碩士</li>
+                  <li>現任法律事務所主持律師</li>
+                  <li>現任台灣上市櫃企業獨立董事</li>
+                  <li>曾任美商銀行北亞區法律顧問/副總裁</li>
+                  <li>曾任法商銀行亞太區法律顧問/副總裁</li>
+                  <li>曾任美商投資銀行法律談判專家暨全球性專案談判負責人</li>
+                  <li>曾任澳商銀行金融市場部/資深律師</li>
+                </ul>
+              </div>
+              <div class="d_flex">
+                <h5>資格 / 證照</h5>
+                <ul>
+                  <li>台灣執業律師</li>
+                  <li>美國紐約州合格律師</li>
+                  <li>美國會計師考試及格</li>
+                  <li>中國律師考試及格</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 書籍著作 -->
+        <div class="item part2">
+          <div class="show">
+            <div class="book">
+              <div class="group d_flex">
+                <div class="img_inner wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
+                  <img src="assets/images/index/book.png" alt="book">
+                </div>
+                <div class="txt wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.4s">
+                  <div class="d_flex txt_title">
+                    <h5>識人談判課</h5>
+                    <p>直指人心的五大談判風格，<br>
+                      讓你精準談出好關係、好工作、好人生!
+                    </p>
+                  </div>
+                  <h6>為什麼我要寫這一本書？<br>
+                    當律師這麼多年，我發現人與人間的矛盾衝突，若是當事人能具備好好溝通的談判能力，往往可以免除許多不必要的爭議，甚至免除訴訟之累。<br>
+                    原來「談判」，是一項如此重要的技能。<br>
+                    若能談得好，你不但可以談出好關係、談出好工作! 長遠地看，<br>
+                    你還能談出好運氣、談出好人生
+                  </h6>
+                  <p>讓步是軟弱？堅持是強勢？還是能在不動聲色中改變局勢？<br>第一線律師的實戰心法，教你掌握識人關鍵，從職場到生活，都能自信談判、漂亮應對！</p>
+                  <div class="btn_wrap">
+                    <a href="https://www.books.com.tw/products/0011014337?sloc=main" class="btn" target="_blank">
+                      <i></i>
+                      <div>
+                        <p>前往購買</p>
+                        <span></span>
+                      </div>
+                    </a>
+                    <a href="book_negotiation.html" class="btn">
+                      <i></i>
+                      <div>
+                        <p>了解更多</p>
+                        <span></span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="book">
+              <div class="group d_flex">
+                <div class="img_inner wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
+                  <img src="assets/images/index/book2.png" alt="book">
+                </div>
+                <div class="txt wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.4s">
+                  <div class="txt_title">
+                    <h5>誰說只是約會，你就不用懂法律？</h5>
+                  </div>
+                  <h6>24則感情法律學分，教你避開陷阱，<br>降低傷害，遠離戀愛鬼故事<br>情路上不小心撞見鬼，法律上我能夠怎麼解?<br>一本「談情說愛」的法律書其實是教你如何好好愛的索引。</h6>
+                  <p>這是法律書？我還以為在看戀愛律政劇！<br>感情事件╳法律攻防，從追求、交往、分手到婚前糾葛，其實有解！</p>
+                  <div class="btn_wrap">
+                    <a href="https://www.books.com.tw/products/0010946750?sloc=main" class="btn" target="_blank">
+                      <i></i>
+                      <div>
+                        <p>前往購買</p>
+                        <span></span>
+                      </div>
+                    </a>
+                    <a href="book_relationship.html" class="btn">
+                      <i></i>
+                      <div>
+                        <p>了解更多</p>
+                        <span></span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 聯繫方式 -->
+        <div class="item part3">
+          <div class="bg_wrap">
+            <div class="txt">
+              <h6>如有任何服務需求，<br>歡迎隨時與我們聯繫!</h6>
+              <div class="btn_wrap">
+                <a href="service.html#contact" class="btn">
+                  <i></i>
+                  <div>
+                    <p>前往預約</p>
+                    <span></span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 服務項目 -->
+    <section class="service">
+      <div class="title d_flex">
+        <div class="en">
+          <h6>Service</h6>
+        </div>
+        <div class="ch">
+          <h6>合作洽談</h6>
+        </div>
+      </div>
+      <div class="content d_flex wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.2s">
+        <a href="#pop_service" class="btn popup_open">
+          <i></i>
+          <div>
+            <p>法律諮詢</p>
+          </div>
+        </a>
+        <a href="#pop_service" class="btn popup_open">
+          <i></i>
+          <div>
+            <p>法律顧問</p>
+          </div>
+        </a>
+        <a href="#pop_service" class="btn popup_open">
+          <i></i>
+          <div>
+            <p>商務談判</p>
+          </div>
+        </a>
+        <a href="#pop_service" class="btn popup_open">
+          <i></i>
+          <div>
+            <p>專題演講</p>
+          </div>
+        </a>
+        <a href="#pop_service" class="btn popup_open">
+          <i></i>
+          <div>
+            <p>談判課程</p>
+          </div>
+        </a>
+        <a href="#pop_service" class="btn popup_open">
+          <i></i>
+          <div>
+            <p>企業培訓</p>
+          </div>
+        </a>
+        <a href="#pop_service" class="btn popup_open">
+          <i></i>
+          <div>
+            <p>專欄寫作</p>
+          </div>
+        </a>
+        <a href="#pop_service" class="btn popup_open">
+          <i></i>
+          <div>
+            <p>溝通技巧</p>
+          </div>
+        </a>
+        <a href="#pop_service" class="btn popup_open">
+          <i></i>
+          <div>
+            <p>會議主持</p>
+          </div>
+        </a>
+        <a href="#pop_service" class="btn popup_open">
+          <i></i>
+          <div>
+            <p>採訪合作</p>
+          </div>
+        </a>
+        <a href="#pop_service" class="btn popup_open">
+          <i></i>
+          <div>
+            <p>學習工作坊</p>
+          </div>
+        </a>
+        <a href="#pop_service" class="btn popup_open">
+          <i></i>
+          <div>
+            <p>和解調解</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- news -->
+    <style>.news_cover_0{background-image: url('assets/images/news/d70dca092f062a8013a2b2f98ed97299.jpeg');}@media only screen and (-webkit-min-device-pixel-ratio: 1.5),only screen and (min-resolution: 1.5dppx),(-webkit-min-device-pixel-ratio: 1.5),(min-resolution: 144dpi){.news_cover_0{background-image: url('assets/images/news/d70dca092f062a8013a2b2f98ed97299@2x.jpeg');}}.news_cover_1{background-image: url('assets/images/news/7032dc2c7e0dc2c199fa8720f7a4d0e1.jpeg');}@media only screen and (-webkit-min-device-pixel-ratio: 1.5),only screen and (min-resolution: 1.5dppx),(-webkit-min-device-pixel-ratio: 1.5),(min-resolution: 144dpi){.news_cover_1{background-image: url('assets/images/news/7032dc2c7e0dc2c199fa8720f7a4d0e1@2x.jpeg');}}.news_cover_2{background-image: url('assets/images/news/8cf316fb40bd2f444c1191cb3a0cf377.jpeg');}@media only screen and (-webkit-min-device-pixel-ratio: 1.5),only screen and (min-resolution: 1.5dppx),(-webkit-min-device-pixel-ratio: 1.5),(min-resolution: 144dpi){.news_cover_2{background-image: url('assets/images/news/8cf316fb40bd2f444c1191cb3a0cf377@2x.jpeg');}}</style>          <section class="s2">
+        <div class="content">
+          <div class="head">
+            <div class="title d_flex">
+              <div class="en">
+                <h6>News</h6>
+              </div>
+              <div class="ch">
+                <h6>最新分享</h6>
+              </div>
+            </div>
+            <div class="for_pc">
+              <a href="news.html" class="btn">
+                <i></i>
+                <div>
+                  <p>更多文章</p>
+                  <span></span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <article class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.2s">
+                          <div class="item">
+                <div>
+                  <div class="news_img news_cover_0"></div>
+                  <div class="txt">
+                    <h6>趙少康專訪無糖律師《識人談判課》</h6>
+                    <p>無糖律師二度上【趙少康時間】接受書訪～ 看看這次無糖律師和趙大哥談什麼是預防法學？</p>
+                  </div>
+                </div>
+                <a href="news.html#article-22" class="more">MORE</a>
+              </div>
+                          <div class="item">
+                <div>
+                  <div class="news_img news_cover_1"></div>
+                  <div class="txt">
+                    <h6>《識人談判課》封面照側拍實錄</h6>
+                    <p>千呼萬喚始出來，無糖律師的第二本書《識人談判課》終於出來了!</p>
+                  </div>
+                </div>
+                <a href="news.html#article-18" class="more">MORE</a>
+              </div>
+                          <div class="item">
+                <div>
+                  <div class="news_img news_cover_2"></div>
+                  <div class="txt">
+                    <h6>永豐銀行勞資講座(台北場)</h6>
+                    <p>永豐銀行特別邀請無糖律師主持全省巡迴講座，幫助創業家們掌握訂定契約的關鍵技巧、訂約前要考慮策略進而預防未來潛在的勞資爭議。</p>
+                  </div>
+                </div>
+                <a href="news.html#article-12" class="more">MORE</a>
+              </div>
+                      </article>
+          <div class="for_m text_center">
+            <a href="news.html" class="btn">
+              <i></i>
+              <div>
+                <p>更多文章</p>
+                <span></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    
+    <!-- 合作單位 -->
+              <section class="s3">
+        <div class="content">
+          <div class="title">
+            <div class="en">
+              <h6>Cooperation Partners</h6>
+            </div>
+            <div class="ch">
+              <h6>合作單位</h6>
+            </div>
+          </div>
+          <div class="show wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.2s">
+                          <div class="item">
+                              <div class="box"><img src="assets/images/partners/4cda1ecce998ca1ddf6a874a4b6aaffc.jpeg" class="logo" alt="易遊網" srcset="assets/images/partners/4cda1ecce998ca1ddf6a874a4b6aaffc@2x.jpeg 2x"></div>
+                                                        <div class="box"><img src="assets/images/partners/b772b16656bff680601169d5bd8553ee.jpeg" class="logo" alt="誠品" srcset="assets/images/partners/b772b16656bff680601169d5bd8553ee@2x.jpeg 2x"></div>
+                              </div>
+                                        <div class="item">
+                              <div class="box"><img src="assets/images/partners/1d546cc8919dd732f496198bbf45037a.png" class="logo" alt="國泰人壽"></div>
+                                                        <div class="box"><img src="assets/images/partners/71a7eb8306a1b4d66b2e25e2c2c8ee48.png" class="logo" alt="開拓者行銷"></div>
+                              </div>
+                                        <div class="item">
+                              <div class="box"><img src="assets/images/partners/8c4b585163dfdda364e4cc08f43fb2d9.png" class="logo" alt="言果學習"></div>
+                                                        <div class="box"><img src="assets/images/partners/a9e9f40e5de8cfe500927d78aba46b5a.jpeg" class="logo" alt="大陸工程"></div>
+                              </div>
+                                        <div class="item">
+                              <div class="box"><img src="assets/images/partners/f205f4056f32ace03d136589b6d6daab.jpeg" class="logo" alt="和泰汽車"></div>
+                                                        <div class="box"><img src="assets/images/partners/2785c4bef49c2863c4ad3a80a0f66710.png" class="logo" alt="富邦銀行"></div>
+                              </div>
+                                        <div class="item">
+                              <div class="box"><img src="assets/images/partners/b38cdd151aac09a150dd1473788ed0eb.jpeg" class="logo" alt="COMMEET" srcset="assets/images/partners/b38cdd151aac09a150dd1473788ed0eb@2x.jpeg 2x"></div>
+                                                        <div class="box"><img src="assets/images/partners/22a6be8c7925ce2561a413c234c882e9.jpeg" class="logo" alt="展望國際行銷"></div>
+                              </div>
+                                        <div class="item">
+                              <div class="box"><img src="assets/images/partners/9f8205bf87bc6347c7c822889e000686.png" class="logo" alt="台北市立啟聰學校" srcset="assets/images/partners/9f8205bf87bc6347c7c822889e000686@2x.png 2x"></div>
+                                                        <div class="box"><img src="assets/images/partners/e82c49085ae0aa42bb2a975799dc8713.png" class="logo" alt="中國廣播公司" srcset="assets/images/partners/e82c49085ae0aa42bb2a975799dc8713@2x.png 2x"></div>
+                              </div>
+                                        <div class="item">
+                              <div class="box"><img src="assets/images/partners/5078d13a528ed43bbc4d80d1f423b142.png" class="logo" alt="明新科技大學" srcset="assets/images/partners/5078d13a528ed43bbc4d80d1f423b142@2x.png 2x"></div>
+                                                        <div class="box"><img src="assets/images/partners/4ab7ff7b6da16743cc47308c230eccec.png" class="logo" alt="和君管理"></div>
+                              </div>
+                                        <div class="item">
+                              <div class="box"><img src="assets/images/partners/b521ef215ddd3be8d9043f1231906331.png" class="logo" alt="銘傳大學" srcset="assets/images/partners/b521ef215ddd3be8d9043f1231906331@2x.png 2x"></div>
+                                                        <div class="box"><img src="assets/images/partners/cf7029fa809817a4b6890243589a1a29.jpeg" class="logo" alt="彼樂福整合行銷" srcset="assets/images/partners/cf7029fa809817a4b6890243589a1a29@2x.jpeg 2x"></div>
+                              </div>
+                                        <div class="item">
+                              <div class="box"><img src="assets/images/partners/c3df869feddb8dd4ddebda3faceaff77.png" class="logo" alt="時報出版"></div>
+                                                        <div class="box"><img src="assets/images/partners/a9a6cb53bc4658a65dc36edc4d51369c.jpeg" class="logo" alt="台灣聽障女子運動與休閒協會" srcset="assets/images/partners/a9a6cb53bc4658a65dc36edc4d51369c@2x.jpeg 2x"></div>
+                              </div>
+                                        <div class="item">
+                              <div class="box"><img src="assets/images/partners/34cae02ef0d384c54884fab3e801eb43.png" class="logo" alt="衣架的店"></div>
+                                                        <div class="box"><img src="assets/images/partners/49d23e2926637b84cf6ee953b11f4ef1.jpeg" class="logo" alt="FOS" srcset="assets/images/partners/49d23e2926637b84cf6ee953b11f4ef1@2x.jpeg 2x"></div>
+                              </div>
+                                        <div class="item">
+                              <div class="box"><img src="assets/images/partners/70664b9b604a17734f92be15ccf31b3d.png" class="logo" alt="奇思" srcset="assets/images/partners/70664b9b604a17734f92be15ccf31b3d@2x.png 2x"></div>
+                                                        <div class="box"><img src="assets/images/partners/61c73b2ded6e875161fdd8ca87273457.png" class="logo" alt="BRIDGING" srcset="assets/images/partners/61c73b2ded6e875161fdd8ca87273457@2x.png 2x"></div>
+                              </div>
+                                        <div class="item">
+                              <div class="box"><img src="assets/images/partners/b11ea8df794f0ee2a50f89493e56a9a0.png" class="logo" alt="錦盒" srcset="assets/images/partners/b11ea8df794f0ee2a50f89493e56a9a0@2x.png 2x"></div>
+                                                        <div class="box"><img src="assets/images/partners/b159d7b8ee4f372e83fc262908e02a9c.png" class="logo" alt="古記雞居酒屋" srcset="assets/images/partners/b159d7b8ee4f372e83fc262908e02a9c@2x.png 2x"></div>
+                              </div>
+                                        <div class="item">
+                              <div class="box"><img src="assets/images/partners/97b9328358e534753257cf80b4a7c363.jpeg" class="logo" alt="puzzle"></div>
+                                                        <div class="box"><img src="assets/images/partners/7bdd8709e387b9650c59b671e21d9183.png" class="logo" alt="亞神音樂娛樂" srcset="assets/images/partners/7bdd8709e387b9650c59b671e21d9183@2x.png 2x"></div>
+                              </div>
+                                        <div class="item">
+                              <div class="box"><img src="assets/images/partners/8f2cfeb2db5cc904c40c062a2de23f3a.jpeg" class="logo" alt="錦加傢飾" srcset="assets/images/partners/8f2cfeb2db5cc904c40c062a2de23f3a@2x.jpeg 2x"></div>
+                                                        <div class="box"><img src="assets/images/partners/104d668ab324beb986e42a18a1af1805.jpeg" class="logo" alt="宇喬設計" srcset="assets/images/partners/104d668ab324beb986e42a18a1af1805@2x.jpeg 2x"></div>
+                              </div>
+                                        <div class="item">
+                              <div class="box"><img src="assets/images/partners/0ad88bf09ea0e426798bd1c5b5f37361.png" class="logo" alt="巨群" srcset="assets/images/partners/0ad88bf09ea0e426798bd1c5b5f37361@2x.png 2x"></div>
+                                                        <div class="box"><img src="assets/images/partners/979221145132ee87ac3c409d42fddb44.png" class="logo" alt="印樂網"></div>
+                              </div>
+                                        <div class="item">
+                              <div class="box"><img src="assets/images/partners/dde9a0505685d94e8cba8d263568baa8.png" class="logo" alt="賽斯國際" srcset="assets/images/partners/dde9a0505685d94e8cba8d263568baa8@2x.png 2x"></div>
+                                                        <div class="box"><img src="assets/images/partners/a00b52fb258eb0d21fc3990a62bb1478.png" class="logo" alt="威齊織品科技有限公司"></div>
+                              </div>
+                                        <div class="item">
+                              <div class="box"><img src="assets/images/partners/4609b1d20291aab9a5e5a5dd40248894.png" class="logo" alt="山研所" srcset="assets/images/partners/4609b1d20291aab9a5e5a5dd40248894@2x.png 2x"></div>
+                                                        <div class="box"><img src="assets/images/partners/ef80f50b76a3557a2bc118e7768b2642.png" class="logo" alt="社團法人成衣印花文創協會"></div>
+                              </div>
+                                        <div class="item">
+                              <div class="box"><img src="assets/images/partners/5fa7bfd9a9da9eaa3d03cc0c6c3517a6.png" class="logo" alt="吉爾登" srcset="assets/images/partners/5fa7bfd9a9da9eaa3d03cc0c6c3517a6@2x.png 2x"></div>
+                                                        <div class="box"><img src="assets/images/partners/2999268e5a630038988be1c341bc192f.png" class="logo" alt="台灣房屋"></div>
+                              </div>
+                                        <div class="item">
+                              <div class="box"><img src="assets/images/partners/8dd9fdd3511eb2ef316a9f3c215d95ab.png" class="logo" alt="coplay" srcset="assets/images/partners/8dd9fdd3511eb2ef316a9f3c215d95ab@2x.png 2x"></div>
+                                                        <div class="box"><img src="assets/images/partners/bc630ba73c611463b34909a4f0050354.jpeg" class="logo" alt="中信房屋" srcset="assets/images/partners/bc630ba73c611463b34909a4f0050354@2x.jpeg 2x"></div>
+                              </div>
+                                        <div class="item">
+                              <div class="box"><img src="assets/images/partners/5757fc8f7dd8f6de197c04733f22e0ff.jpeg" class="logo" alt="永豐銀行" srcset="assets/images/partners/5757fc8f7dd8f6de197c04733f22e0ff@2x.jpeg 2x"></div>
+                                                        <div class="box"><img src="assets/images/partners/ddba456115748d7cb69a32db8c60e509.jpeg" class="logo" alt="遠流出版公司"></div>
+                              </div>
+                                        <div class="item">
+                              <div class="box"><img src="assets/images/partners/4461d205e3eae9e3942848a471be592d.png" class="logo" alt="LemTech"></div>
+                                                        <div class="box"><img src="assets/images/partners/c79b0b4c91ab6ac505ae43d53a55888a.png" class="logo" alt="天下雜誌" srcset="assets/images/partners/c79b0b4c91ab6ac505ae43d53a55888a@2x.png 2x"></div>
+                              </div>
+                                        <div class="item">
+                              <div class="box"><img src="assets/images/partners/1b40898483d884000ae480b1df1f5341.png" class="logo" alt="同致電子"></div>
+                                                        <div class="box"><img src="assets/images/partners/c3d6c6b565aad1c0783902777cb68bdd.png" class="logo" alt="傑卡創意" srcset="assets/images/partners/c3d6c6b565aad1c0783902777cb68bdd@2x.png 2x"></div>
+                              </div>
+                                        <div class="item">
+                              <div class="box"><img src="assets/images/partners/3b4f68cc345285bc2b49faeb2cfa8e0a.jpeg" class="logo" alt="桃園市政府" srcset="assets/images/partners/3b4f68cc345285bc2b49faeb2cfa8e0a@2x.jpeg 2x"></div>
+                                                        <div class="box"><img src="assets/images/partners/e6159b806a3d726efa8ea0cedd75e68c.png" class="logo" alt="新世界美語"></div>
+                              </div>
+                                        <div class="item">
+                              <div class="box"><img src="assets/images/partners/08a8999e20aa72779cecd0d27f5cef27.png" class="logo" alt="台北市立圖書館" srcset="assets/images/partners/08a8999e20aa72779cecd0d27f5cef27@2x.png 2x"></div>
+                                                        <div class="box"><img src="assets/images/partners/3a28a6959bd4cfe86a0bd73154d1958c.jpeg" class="logo" alt="KTCC韓國台灣商會總會" srcset="assets/images/partners/3a28a6959bd4cfe86a0bd73154d1958c@2x.jpeg 2x"></div>
+                              </div>
+                                    </div>
+        </div>
+      </section>
+    
+    <!-- YT -->
+    <section class="s5">
+      <div class="content">
+        <div class="show">
+          <div class="item">
+            <div class="box">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/2o48rhHWu7Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/3zFK5BKNdiE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/IsFK8CHaOTo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/OKUWnTR3t6I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ig -->
+          </div>
+  <!-- <div class="pop pop_workshop" id="pop_workshop">
+  <div class="pop_wrap">
+    <div class="body">
+      <div class="content">
+        <div class="content_group">
+          <a href="#" class="close popup_close">
+            <span></span>
+            <span></span>
+          </a>
+          <div class="txt">
+            <h5>無糖律師 《識人談判課》 新書分享會</h5>
+            <div class="group">
+              <div class="item">
+                <div class="title">
+                  <p>台北｜金石堂汀州店</p>
+                </div>
+                <div class="word">
+                  <div class="d_flex">
+                    <p>時間：</p>
+                    <p>3/8 (六) 19:30－21:00</p>
+                  </div>
+                  <div class="d_flex">
+                    <p>地點：</p>
+                    <p>台北市汀州路三段184號B1</p>
+                  </div>
+                  <div class="d_flex">
+                    <p>與談人：</p>
+                    <p>雷浩斯<span>（價值投資者、財經作家）</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="title">
+                  <p>台中｜誠品生活園道店</p>
+                </div>
+                <div class="word">
+                  <div class="d_flex">
+                    <p>時間：</p>
+                    <p>3/15 (六) 19:30－20:30</p>
+                  </div>
+                  <div class="d_flex">
+                    <p>地點：</p>
+                    <p>台中市西區公益路68號3樓</p>
+                  </div>
+                  <div class="d_flex">
+                    <p>與談人：</p>
+                    <p>江奕緯<span>（巨群國際專利商標法律事務所 部長）</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="title">
+                  <p>台北｜REEDS Bookstore</p>
+                </div>
+                <div class="word">
+                  <div class="d_flex">
+                    <p>時間：</p>
+                    <p>3/16 (日) 14:30－16:00</p>
+                  </div>
+                  <div class="d_flex">
+                    <p>地點：</p>
+                    <p>台北市民權東路二段107號8樓<span>（民權書店 8 樓階梯講廳）</span></p>
+                  </div>
+                  <div class="d_flex">
+                    <p>與談人：</p>
+                    <p>郝旭烈<span>（知名作家、Podcast 主持人）</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="title">
+                  <p>新竹｜誠品新竹巨城店</p>
+                </div>
+                <div class="word">
+                  <div class="d_flex">
+                    <p>時間：</p>
+                    <p>3/23 (日) 14:30－15:30</p>
+                  </div>
+                  <div class="d_flex">
+                    <p>地點：</p>
+                    <p>新竹市東區中央路229號5F</p>
+                  </div>
+                  <div class="d_flex">
+                    <p>與談人：</p>
+                    <p>江奕緯<span>（巨群國際專利商標法律事務所 部長）</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="title">
+                  <p>高雄｜台鋁書店</p>
+                </div>
+                <div class="word">
+                  <div class="d_flex">
+                    <p>時間：</p>
+                    <p>4/27 (日) 15:00－16:00</p>
+                  </div>
+                  <div class="d_flex">
+                    <p>地點：</p>
+                    <p>高雄市前鎮區忠勤路8號1樓</p>
+                  </div>
+                  <div class="d_flex">
+                    <p>與談人：</p>
+                    <p>范永銀<span>（MEDDIC 世界一流銷售暢銷書作者）</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+</div>
+<div class="pop pop_service" id="pop_service">
+  <div class="pop_wrap">
+    <div class="body">
+      <div class="content">
+        <div class="content_group">
+          <a href="#" class="close popup_close">
+            <span></span>
+            <span></span>
+          </a>
+          <div class="txt">
+            <h5></h5>
+            <div class="word">
+              <!-- <p>在法律的複雜世界中，您需要的不僅是建議，而是專業的指導。我們的法律諮詢服務旨在為您提供深入的法律分析與建議，無論是面對面、電話或視訊會議，我們的律師將針對您的具體情況，提供清晰且具體的法律意見，幫助您有效應對各種挑戰，確保您的權益得到充分保障。</p>
+              <p>在面對法律問題時，您需要不僅是建議，而是設身處地為您著想並富有專業的指導。我們依每人不同的需求，提供以口頭或書面的法律意見，無論是電話、視訊還是面對面會議，都將為您提供清晰、具體的法律建議，助您有效解決問題，維護您的權益。</p> -->
+            </div>
+            <div class="btn_wrap">
+              <a href="service.html#contact" class="btn">
+                <i></i>
+                <div>
+                  <p>前往預約</p>
+                  <span></span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  
+<div class="fixed">
+  <div class="d_flex">
+    <a href="https://search.books.com.tw/search/query/key/%E7%84%A1%E7%B3%96%E5%BE%8B%E5%B8%AB/cat/all" target="_blank" rel="noopener noreferrer" class="book_btn">
+      <p>
+        收藏著作
+        <img src="assets/images/main/fixed_book.png" alt="收藏著作">
+      </p>
+    </a>
+    <div class="media">
+              <a href="https://www.facebook.com/profile.php?id=100077095818950" class="icon fb" target="_blank" rel="noopener noreferrer">
+          <img src="assets/images/main/fb.png" alt="FB">
+        </a>
+                    <a href="https://www.instagram.com/attsugarfree/?utm_source=ig_embed&amp;ig_rid=30f19d2c-061a-439e-b936-ccab6b21410b" class="icon ig" target="_blank" rel="noopener noreferrer">
+          <img src="assets/images/main/ig.png" alt="IG">
+        </a>
+                    <a href="https://www.youtube.com/@%E7%84%A1%E7%B3%96%E5%BE%8B%E5%B8%AB" class="icon yt" target="_blank" rel="noopener noreferrer">
+          <img src="assets/images/main/yt.png" alt="YouTube">
+        </a>
+                    <a href="https://line.me/ti/g2/v6MeBMzLZNLWotm-WrmSPC0fk6w8FprIS9tvIQ?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default" class="icon line" target="_blank" rel="noopener noreferrer">
+          <img src="assets/images/main/line.png" alt="Line">
+        </a>
+                    <a href="https://podcasts.apple.com/tw/podcast/%E7%84%A1%E7%B3%96%E4%B8%8D%E5%AE%89%E9%9D%9C%E7%9A%84%E4%BA%BA%E7%94%9F%E8%A7%A3%E6%86%82bar/id1787171162" class="icon podcast" target="_blank" rel="noopener noreferrer">
+          <img src="assets/images/main/podcast.png" alt="Podcast">
+        </a>
+          </div>
+    <a href="#" class="top">
+      <img src="assets/images/main/top.png" alt="TOP">
+      <p>TOP</p>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="d_flex">
+    <p>Copyright © 2025 不代表律師立場 版權所有 隱私權政策</p>
+    <a href="https://jca-digital.com/" target="_blank" rel="noopener noreferrer">Design by JCA Creative Marketing
+      <i></i>
+    </a>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="assets/js/script.js"></script>
 </body>
 </html>
